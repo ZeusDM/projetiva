@@ -5,8 +5,20 @@
 	paper = a4paper,
 	twoside = false,
 }
-\usepackage[brazilian]{babel}
-\usepackage{zeus}
+\usepackage[brazilian]{babel}	% Traduz as coisas automáticas (como datas, capítulos, etc) para PT-BR.
+\usepackage{enumitem}			% Cria listas maneiras.
+\usepackage{amsmath, amssymb, amsfonts}	% Packages da American Mathematical Society.
+
+% Definição de ambientes de teoremas.
+\usepackage{amsthm}
+\newtheorem{thm}{Teorema}
+\newtheorem{prop}[thm]{Proposição}
+\newtheorem{exer}{Exercício}
+\newtheorem*{que}{Questão}
+\theoremstyle{definition}
+\newtheorem{defn}{Definição}
+\newtheorem{pdefn}[defn]{Proposta de Definição}
+
 \title{Geometria no Plano Projetivo}
 \author{}
 \date{}
