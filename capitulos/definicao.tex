@@ -1,0 +1,65 @@
+\chapter{Definindo o Plano Projetivo}
+
+\section{Plano Euclidiano}
+
+Você talvez esteja acostumado com a noção do Plano Euclidiano.
+Essa estrutura involve muitos conceitos, incluindo (mas não limitado a):
+\begin{enumerate}[label = \textbullet]
+	\item pontos,
+	\item retas,
+	\item segmentos de reta,
+	\item distância,
+	\item ângulos,
+	\item polígonos (triângulos, quadriláteros, \dots),
+	\item circunferências,
+	%\item conics (ellipses, parabolas, and hyperbolas),
+	\item transformações (rotações, translações, reflexões, \dots).
+\end{enumerate}
+
+Apesar de todas esses conceitos estarem empacotadas no Plano Euclidiano, parece que os conceitos mais fundamentais são os primeiros dessa lista.
+Em outras palavras, os conceitos de \emph{pontos} e \emph{retas} parecem ser mais simples e mais relacionados à definição de Plano Euclidiano, do que os conceitos de \emph{ângulos} e \emph{transformações}.
+
+Nós poderíamos gastar algumas folhas formalizando a definição de Plano Euclidiano (usando o que os matemáticos chamam de \emph{axiomas}) e nos converncer de que, de fato, \emph{pontos} e \emph{retas} são intimamente relacionados ao que realmente o Plano Euclidiano é.
+Porém, nós prefirimos não fazer isso.
+Na verdade, vamos listar duas propriedades que o Plano Euclidiano \emph{parece} ter:
+\begin{enumerate}[label = (\textit{\roman*})]
+	\item Para cada par de pontos distindos, existe uma única reta passando por ambos. \label{item:pe:i}
+	\item Para cada par de retas distintas, existe um único ponto que está em ambas. \label{item:pe:ii}
+\end{enumerate}
+
+\begin{exer} \label{exer:propriedadesdoplanoeuclidiano}
+	Descubra se as propriedades acima são verdades ou não no Plano Euclideano.
+\end{exer}
+
+\section{Plano Projetivo}
+
+No Exercício \ref{exer:propriedadesdoplanoeuclidiano}, você talvez tenha notado que, embora a propriedade \ref{item:pe:i} seja verdadeira, \ref{item:pe:ii} não é.
+Existe até um nome especial para um par de retas que não se encontra em nenhum ponto: dizemos que essas retas são \emph{retas paralelas}.
+
+% Aside: We could here define a relation between pair of lines, namely "line \(\ell_1\) is parallel to line \(\ell_2\)",
+% and deduce that this relation is an equivalence relation; thus generates equivalence classes.
+
+%In fact, one of the axioms of the Euclidean Plane directly contradicts \ref{item:pe:ii}:
+%\begin{quote} % www.math.brown.edu/tbanchof/Beyond3d/chapter9/section01.html 
+%	For every given point not on a given line, there exists a unique line passing through the given point that does not meet the given line.
+%\end{quote}
+
+Mas... as propriedades \ref{item:pe:i} e \ref{item:pe:ii} são tão bonitas (pelo menos pra nós).
+É tão triste que elas não são verdadeiras.
+Bem, nós somos matemáticos!
+Nós podemos fazer o que quisermos com nossas definições (apesar de ter que viver com suas consequências).
+
+\begin{pdefn}
+	Um \emph{plano projetivo} é uma estrutura que consiste em três coisas:
+	\begin{enumerate}[label = \textbullet]
+		\item um conjunto \(\mathcal P\) de pontos,
+		\item um conjunto \(\mathcal L\) de retas, e
+		\item uma noção de incidência, i.e., se \(P\) é um ponto e \(\ell\) é uma reta, nós poderemos dizer se \(\ell\) passa (ou não) pelo ponto \(P\).
+	\end{enumerate}
+
+	Adicionalmente, precisamos das seguintes propriedades:
+	\begin{enumerate}[label = (\textit{\roman*})]
+		\item Para cada par de pontos distindos, existe uma única reta passando por ambos. \label{item:pp:i}
+		\item Para cada par de retas distintas, existe um único ponto que está em ambas. \label{item:pp:ii}
+	\end{enumerate}
+\end{pdefn}
