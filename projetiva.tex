@@ -15,16 +15,16 @@
 
 % Definição de ambientes de teoremas.
 \usepackage{amsthm}
-\newtheorem{thm}{Teorema}
+\newtheorem{thm}{Teorema}[chapter]
 \newtheorem{prop}[thm]{Proposição}
-\newtheorem{exer}{Exercício}
-\newtheorem*{que}{Questão}
-\theoremstyle{definition}
-\newtheorem{defn}{Definição}
-\newtheorem{pdefn}[defn]{Proposta de Definição}
-\newtheorem{exmp}{Exemplo}
 \newtheorem{lem}[thm]{Lema}
 \newtheorem{cor}[thm]{Corolário}
+\newtheorem{exer}{Exercício}[chapter]
+\newtheorem*{que}{Questão}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definição}
+\newtheorem{pdefn}[thm]{Proposta de Definição}
+\newtheorem{exmp}{Exemplo}
 
 \newcommand{\RR}{\mathbb{R} }
 \newcommand{\KK}{\mathbb{K} }
