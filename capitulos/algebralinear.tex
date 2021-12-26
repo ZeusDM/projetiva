@@ -1,41 +1,12 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath,amssymb,latexsym, amsthm}
-\usepackage{fullpage, indentfirst}
-\usepackage[portuguese]{babel}
-\usepackage{natbib}
-\usepackage{graphicx}
-\usepackage{tcolorbox}
-\usepackage{hyperref}
 
-\title{Álgebra Linear}
-\author{Miguel Batista}
-\date{}
-
-\newtcolorbox{mybox}{colback=black!1!white,colframe=black!75!black}
-
-\newtheorem{theorem}{Teorema}[section]
-\newtheorem{example}{Exemplo}[subsection] 
-\newtheorem{lemma}[theorem]{Lema}
-\newtheorem{corollary}[theorem]{Corolário}
-\newtheorem{definition}{Definição}[section]
-
-\newcommand{\RR}{\mathbb{R} }
-\newcommand{\KK}{\mathbb{K} }
-\newcommand{\ZZ}{\mathbb{Z} }
-\newcommand{\VV}{\mathbb{V} }
-\setcounter{section}{-1}
-
-\begin{document}
-
-\maketitle
+\chapter{Álgebra Linear}
 
 \section{Algumas definições}
 
 Antes de partimos para o tópico principal é necessário que algumas definições estejam claras.
 
 %\subsection{Função}
-\begin{definition}
+\begin{defn}
 
 
 $f$ é uma função do conjunto A no conjunto B (denota-se $f: \text{A} \to \text{B}$) se:
@@ -44,10 +15,10 @@ $f$ é uma função do conjunto A no conjunto B (denota-se $f: \text{A} \to \tex
 \[f \subset A \times B \text{ tal que } \forall a \in A \ \exists ! \ b \in B \ | \ (a,b) \in f \]
 
 Denotamos $f(a) = b \iff (a,b) \in f$
-\end{definition}
+\end{defn}
 
 
-\begin{definition}
+\begin{defn}
 
 %Uma operação binária \emph{estrela} em um conjunto X é, por definição, uma função de X $\times$ X em X, ou seja se denotarmos $x$ operação $x'$ como $x \star x'$ temos:
 
@@ -62,9 +33,9 @@ Denotamos $a \star b = c \iff \star(a,b) = c$
 
 Vale uma observação que pela nossa definição de função seria justo que estivesse escrito $\star((a,b))$, já que o elemento no qual aplicamos a função é o $(a,b)$, mas por uma certa comodidade ou talvez preguiça omitimos um dos parenteses. 
 
-\end{definition}
+\end{defn}
 
-\begin{definition}
+\begin{defn}
 
 Um corpo $\KK$ é um conjunto e duas operações, usualmente chamadas de adição e multiplicação, ou seja $\KK = \{C, +, \cdot\}$. Essas operações tem que ter algumas propriedades, sendo elas, para $a,b,c \in C$:
 
@@ -99,7 +70,7 @@ Um corpo $\KK$ é um conjunto e duas operações, usualmente chamadas de adiçã
 
 É usual chamar o $e$ de $0$, o \textbf{$e'$} de $1$, o inverso aditivo de $a$ de $-a$ e o multiplicativo de $a^{-1}$ mesmo quando não estamos falando dos números reais. Além disso também é usual denotarmos $ a \in \KK $ ao invés de  $a \in C$.
 
-\end{definition}
+\end{defn}
 
 Dadas essa definições são bons exercícios mostrar que, para $a,b,c \in \KK $:
 \begin{enumerate}
@@ -111,7 +82,7 @@ Dadas essa definições são bons exercícios mostrar que, para $a,b,c \in \KK $
 
 \section{Até que enfim Espaço}
 
-\begin{definition}
+\begin{defn}
 
 Um espaço vetorial $V$ sobre o corpo $\KK$ é um conjunto munido de duas operações, $\oplus$ e $\odot$. Sendo $\oplus: V \times V \to V \text{ e } \odot: \KK \times V \to V$
 
@@ -144,7 +115,7 @@ Sendo que estas possuem algumas propriedades, para $v,u,w \in V \text{ e } \alph
     
     $\alpha \odot (v \oplus u)= \alpha \odot v + \alpha \odot u$
 \end{enumerate}
-\end{definition}
+\end{defn}
 
 Vale observar, que como em corpos, também é usual simplificarmos um pouco a notação, usando o mesmo símbolo para soma (+) e o produto por escalar é usualmente denotado apenas pela justaposição dos elementos do corpo e do espaço ($\alpha v$), ainda no produto vale ressaltar que só está definido $\alpha v$, logo sempre que estiver escrito $v \alpha$, queremos dizer $\alpha v$.
 
@@ -157,7 +128,7 @@ São bons exercícios mostrar que:
     \item $(-1)v = -v$
 \end{enumerate}
 
-\begin{definition}
+\begin{defn}
 
 Chamamos o espaço vetorial $V'$ de um subespaço de $V$ se: 
 \begin{enumerate}
@@ -172,34 +143,34 @@ Chamamos o espaço vetorial $V'$ de um subespaço de $V$ se:
 %    $ -v \in V'$
 %    \item $0 \in V'$
 \end{enumerate}
-\end{definition}
+\end{defn}
 
 \subsection{Coisas relacionadas com base}
 
 As  definições a seguir podem parecer um pouco desconexas separadas, contudo após elas todas estarem claras, o motivo da existência de cada uma fica mais claro também.
 
 
-\begin{definition}
+\begin{defn}
 Falamos que o vetor $u$  é uma combinação linear entre os vetores $v_1,v_2,\dots,v_n$, quando quando existe $\alpha_1, \alpha_2, \cdots , \alpha_n \in \KK$ tal que $u = \alpha_1v_1 + \alpha_2v_2 +\dots + \alpha_nv_n $.
-\end{definition}
+\end{defn}
 
-\begin{definition}
+\begin{defn}
 Chamamos os vetores $v_1,v_2, \dots, v_n$ de linearmente independentes quando nenhum deles podem ser escritos como uma combinação linear dos outros vetores.
-\end{definition}
+\end{defn}
 
-\begin{corollary}
+\begin{cor}
 $v_1,v_2, \dots, v_n$ são LI (linaermente independes) $\iff \alpha_1v_1 + \alpha_2v_2 +\dots + \alpha_nv_n = 0 \implies \alpha_1 = \alpha_2 = \dots = \alpha_n =0$.
-\end{corollary}
+\end{cor}
 
-\begin{definition}
+\begin{defn}
 Um espaço $V'$ gerado pelos vetores $v_1,v_2,\dots,v_n$ de $V$ é o menor subespaço de $V$ que contém $v_1,v_2,\dots , v_n$.
 
 Obs.: "Menor" significa que não existe nenhum subespaço que contenha esses vetores e  esteja contido em $V'$, tirando o próprio $V'$.
-\end{definition}
+\end{defn}
     
-\begin{lemma}
+\begin{lem}
 O espaço gerados pelos vetores $v_1,v_2, \dots, v_n$ é o conjunto de todas as possíveis combinações lineares entre eles.
-\end{lemma}
+\end{lem}
 
 \begin{proof}
 Como $V'$ é um subespaço, ele é fechado na operação, com isso temos que $\alpha v_i \in V'$ para todo $\alpha \in \KK$, e como se $v,u \in V'$ então $v+u \in V'$ temos que os vetores da forma $\alpha_1v_1 + \alpha_2v_2 +\dots + \alpha_nv_n$ tem que estar em $V'$, como isso configura um espaço pois satisfaz todas as propriedades, como por exemplo ter 0 e ter inverso, e como todo subespaço que contém $v_1,v_2, \dots, v_n$ contém as combinações lineares deles, $V'$ é necessariamente o menor.
@@ -207,14 +178,14 @@ Como $V'$ é um subespaço, ele é fechado na operação, com isso temos que $\a
 
 Vale observar que se eu adicionar ao conjunto de vetores $v_1,v_2, \dots, v_n$ algum vetor $u$ tal que $u$ é uma combinação linear entre os $v$'s temos que o espaço gerado por $v_1,v_2, \dots, v_n$ e $v_1,v_2, \dots, v_n, u$ é o mesmo pois adicionamos alguém que já estava lá. Com isso temos:
 
-\begin{definition}
+\begin{defn}
 Chamamos de base de $V$ qualquer conjuntos de vetores LI de $V$ tal que o espaço gerado por esse conjunto é $V$.
-\end{definition}
+\end{defn}
 
-\begin{lemma}
+\begin{lem}
 \label{Lema1.3}
 Se $v_1,v_2,\dots,v_n$ é uma base de $V$ então $\alpha_1v_1 + \alpha_2v_2 +\dots + \alpha_nv_n, v_2,\dots,v_n $ também é uma base de $V$ se $\alpha_1 \ne 0$
-\end{lemma}
+\end{lem}
 
 \begin{proof}
 Primeiro vamos mostrar que $\alpha_1v_1 + \alpha_2v_2 +\dots + \alpha_nv_n, v_2,\dots,v_n $ são linearmente independentes:
@@ -232,9 +203,9 @@ Como $\alpha_1v_1 + \alpha_2v_2 +\dots + \alpha_nv_n, v_2,\dots,v_n$ geram o esp
 
 \newpage
 
-\begin{theorem}
+\begin{thm}
 Dado um espaço vetorial $V$ sobre $\KK$, todas as suas bases possuem o mesmo número de vetores.
-\end{theorem}
+\end{thm}
 
 
 \begin{proof}
@@ -250,4 +221,3 @@ Suponha, sem perda de generalidade, que $\beta_2 \ne 0$. Pelo lema \ref{Lema1.3}
 Podemos continuar esse processo indutivamente assim obtemos que $v_1,v_2,\dots,v_n,u_{n+1},\dots,u_m$ é uma base,
 contudo como $v_1,v_2,\dots,v_n$ é uma base, temos que eles geram $u_m$, com isso $v_1,v_2,\dots,v_n,u_{n+1},\dots,u_m$ são linearmente dependentes. Com isso temos um absurdo pois eles formam uma base, logo temos que as bases não podem ter tamanhos diferentes.
 \end{proof}
-\end{document}
