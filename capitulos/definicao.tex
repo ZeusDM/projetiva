@@ -49,7 +49,7 @@ Mas... as propriedades \ref{item:pe:i} e \ref{item:pe:ii} são tão bonitas (pel
 Bem, nós somos matemáticos!
 Nós podemos fazer o que quisermos com nossas definições (apesar de ter que viver com suas consequências).
 
-\begin{pdefn}
+\begin{pdefn} \label{pdefn:planoprojetivo}
 	Um \emph{plano projetivo} é uma estrutura que consiste em três coisas:
 	\begin{enumerate}[label = \textbullet]
 		\item um conjunto \(\mathcal P\) de pontos,
@@ -63,3 +63,52 @@ Nós podemos fazer o que quisermos com nossas definições (apesar de ter que vi
 		\item Para cada par de retas distintas, existe um único ponto que está em ambas. \label{item:pp:ii}
 	\end{enumerate}
 \end{pdefn}
+
+Essa proposta de definição é muito boa, porém ela aceita noções de planos projetivos bastante distintos do plano euclidiano.
+
+\begin{exmp}
+	Considere \(\mathcal P\) um conjunto qualquer de pontos, e \(\mathcal L = \{\ell\}\) um conjunto contendo uma única reta \(\ell\).
+	Defina a noção de incidência de modo que qualquer ponto esteja na reta \(\ell\).
+	Ambas as propriedades \ref{item:pp:i} e \ref{item:pp:ii} são satisfeitas; portanto essa estrutura é um plano projetivo pela Definição \ref{pdefn:planoprojetivo}.
+\end{exmp}
+
+\begin{exmp}[Plano de Fano]
+	Seja \(\mathcal P = \{0, 1, 2, 3, 4, 5, 6\}\) e \(\mathcal L = \{\ell_0, \ell_1, \ell_2, \ell_3, \ell_4, \ell_5, \ell_6\}\). Defina a noção de incidência de modo que
+	\begin{align*}
+		\ell_0 &= \{0, 1, 3\} \\
+		\ell_1 &= \{1, 2, 4\} \\
+		\ell_2 &= \{2, 3, 5\} \\
+		\ell_3 &= \{3, 4, 6\} \\
+		\ell_4 &= \{0, 4, 5\} \\
+		\ell_5 &= \{1, 5, 6\} \\
+		\ell_6 &= \{0, 2, 6\}.
+	\end{align*}
+	
+	Você consegue verificar que ambas as propriedades \ref{item:pp:i} e \ref{item:pp:ii} são satisfeitas; portanto essa estrutura é um plano projetivo pela Definição \ref{pdefn:planoprojetivo}.
+\end{exmp}
+
+\subsection{Plano Projetivo Real}
+
+Considere \(\mathcal P\) consistindo de todos os pontos do plano euclidiano; vamos também adicionar um ponto (que não está no plano euclidiano) para cada feixe de retas paralelas do plano euclidiano; isto é, além dos pontos convencionais do ponto euclidiano, para cada direção, existe um ponto novo --- que chamaremos de ponto no infinito relacionado a essa direção.
+
+Considere \(\mathcal L\) consistindo de todas as retas do plano euclidiano, com a diferença que essa reta também irá incidir no ponto do infinito relacionado a sua direção. Além disso, também adicionaremos uma reta em \(\mathcal L\) que contém todos os pontos do infinito --- que chamaremos de reta do infinito.
+
+Apesar de ser confuso, vamos tentar verificar as condições \ref{item:pp:i} e \ref{item:pp:ii}.
+
+Para a condição \ref{item:pp:i}, vamos dividir nas possibilidades para os pares de pontos.
+
+\begin{enumerate}[label = \textbullet]
+	\item Dados dois pontos \(P\) e \(Q\) do plano euclidiano, sabemos que há uma única reta que passa por eles no plano euclidiano; a mesma reta passará por eles na nova estrutura proposta.
+	\item Dado um ponto \(P\) do plano euclidiano, e um ponto \(Q_\infty\) do infinito, sabemos que há uma única reta que passa por \(P\) e está na direção relacionada ao ponto \(Q_\infty\). A reta análoga a esta passará por \(P\) e \(Q_\infty\) na nova estrutura proposta.
+	\item Dados dois pontos \(P_\infty\) e \(Q_\infty\) do infinito, a chamada reta do infinito é a única reta que passa por ambos na estrutura proposta.
+\end{enumerate}
+
+Para a condição \ref{item:pp:ii}, vamos dividir nas possibilidades para os pares de retas.
+
+\begin{enumerate}[label = \textbullet]
+	\item Dadas duas retas \(\ell_1\) e \(\ell_2\) concorrentes no plano euclidiano, sabemos que há um único ponto em ambas no plano euclidiano; o mesmo ponto estará em ambas as retas na nova estrutura proposta.
+	\item Dadas duas retas \(\ell_1\) e \(\ell_2\) paralelas no plano euclidiano, o ponto do infinito relacionado a sua direção estará em ambas as retas na nova estrutura proposta.
+	\item Dadas uma reta \(\ell_1\) no plano euclidiano e a reta \(\ell_\infty\) do infinito, o ponto do infinito relacionado a direção de \(\ell_1\) estará em ambas as retas na nova estrutura proposta.
+\end{enumerate}
+
+Portanto, essa nova estrutura é um plano projetivo, é é muito similar ao plano euclidiano --- de fato, é o plano euclidiano mais alguns pontos e uma reta. Chamamos essa estrutura de plano projetivo real.
