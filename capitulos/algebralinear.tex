@@ -1,4 +1,3 @@
-
 \chapter{Álgebra Linear}
 
 \section{Algumas definições}
@@ -151,7 +150,7 @@ As  definições a seguir podem parecer um pouco desconexas separadas, contudo a
 
 
 \begin{defn}
-Falamos que o vetor $u$  é uma combinação linear entre os vetores $v_1,v_2,\dots,v_n$, quando quando existe $\alpha_1, \alpha_2, \cdots , \alpha_n \in \KK$ tal que $u = \alpha_1v_1 + \alpha_2v_2 +\dots + \alpha_nv_n $.
+Falamos que o vetor $u$  é uma combinação linear entre os vetores $v_1,v_2,\allowbreak\dots,v_n$, quando quando existe $\alpha_1, \alpha_2, \cdots , \alpha_n \in \KK$ tal que $u = \alpha_1v_1 + \alpha_2v_2 +\dots + \alpha_nv_n $.
 \end{defn}
 
 \begin{defn}
@@ -209,7 +208,7 @@ Dado um espaço vetorial $V$ sobre $\KK$, todas as suas bases possuem o mesmo n�
 
 
 \begin{proof}
-Suponha que existem duas bases com tamanhos distintos, seja $v_1,v_2,\dots,v_n$ a menor base de $V$ e $u_1,u_2,\dots,u_m$ outra base de $V$, com isso $m>n$.
+Suponha que existem duas bases com tamanhos distintos, seja $v_1,\allowbreak v_2,\allowbreak \dots, \allowbreak v_n$ a menor base de $V$ e $u_1,u_2,\dots,u_m$ outra base de $V$, com isso $m>n$.
 Como $v_1 \in \KK$, temos que existe $\alpha_1,\alpha_2\dots,\alpha_m \in \KK$ tal que $v_1 = \alpha_1 u_1 + \alpha_2 u_2 + \cdots + \alpha_n u_n$.
 Como $v_1$ é não nulo, temos que para algum $i$, $\alpha_i$ é diferente de 0, sem perda de generalidade suponha $\alpha_1 \ne 0$
  pelo lema \ref{Lema1.3}, temos que  $\alpha_1 u_1 + \alpha_2 u_2 + \cdots + \alpha_n u_n,u_2,\dots,u_m$ é uma base, ou seja, $v_1,u_2,\dots,u_m$ é uma base.
@@ -218,6 +217,6 @@ Como $v_2 \in V$ temos que existem $\beta_1,\beta_2,\dots,\beta_n \in \KK$ tal q
 Se $\beta_2, \beta_3, \dots, \beta_n$ forem todos nulos, então temos que $v_1, v_2, \cdots, v_n$ são linearmente dependentes. Isso é um absurdo pois eles formariam uma base, logo existe $i>1$ com $\beta_i \neq 0$.
 Suponha, sem perda de generalidade, que $\beta_2 \ne 0$. Pelo lema \ref{Lema1.3}, temos que $v_1,\beta_1 v_1 + \beta_2 u_2 + \cdots + \beta_n v_n,u_3\dots,u_m$ é uma base, ou seja $v_1,v_2,u_3\dots,u_m$ é uma base.
 
-Podemos continuar esse processo indutivamente assim obtemos que $v_1,v_2,\dots,v_n,u_{n+1},\dots,u_m$ é uma base,
+Podemos continuar esse processo indutivamente assim obtemos que $v_1, \allowbreak v_2, \allowbreak \dots, \allowbreak v_n, \allowbreak u_{n+1}, \allowbreak \dots, \allowbreak u_m$ é uma base,
 contudo como $v_1,v_2,\dots,v_n$ é uma base, temos que eles geram $u_m$, com isso $v_1,v_2,\dots,v_n,u_{n+1},\dots,u_m$ são linearmente dependentes. Com isso temos um absurdo pois eles formam uma base, logo temos que as bases não podem ter tamanhos diferentes.
 \end{proof}
