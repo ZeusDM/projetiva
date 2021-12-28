@@ -1,38 +1,38 @@
 \chapter{Reta Projetiva}
 
-Inicialmente definiremos o que são os pontos projetivos a partir do $\mathbb{R}^2$:
-
-\begin{defn}[Ponto Projetivo]
-Vamos definir uma relação de equivalência \(\sim\) entre vetores do $\mathbb{R}^2 \setminus \{(0, 0)\}$,
-onde dizemos que \((a,b) \sim (c,d)\) se, e somente se, existe real não nulo \(\lambda\) tal que \[(a,b)=\lambda (c,d).\]
-
-Denotaremos então um ponto projetivo na reta por sua classe de equivalência $[a,b]$ induzida pelo ponto euclidiano $(a,b)$.
-\end{defn} 
-
-Em termos de algebra linear, cada uma dessas classes de equivalência é um subespaço de dimensão $1$ do $\mathbb{R}^2$.
-
-Assim, estamos fazendo uma correspondência entre um ponto projetivo e uma reta que passa pela origem do $\mathbb{R}^2$.
-
-Note que, em termos de coordenadas, só estamos interessados na razão entre as coordenadas de um ponto euclidiano (exceto quando uma delas é zero, o que é fácil de lidar).
-
-\begin{exmp}
-De acordo com a nossa definição, os pontos projetivos $[1,0]$, $[0,1]$, $[1,1]$ e $[2,1]$ correspondem respectivamente ao eixo $x$, ao eixo $y$, à reta $y=x$ e à reta $y=\frac{1}{2}x$ do plano euclidiano.
-
-(inserir desenho)
-\end{exmp}
-
+\section{Definição}
 
 \begin{defn}[Reta Projetiva]
-Definimos a reta projetiva como o conjunto de todos os pontos projetivos como definidos acima e a denotaremos por $\mathbb{P}(\mathbb{R})$.
-
+Vamos chamar de reta projetiva o conjuntos de todas as retas que passam pela origem do $\RR^2$. E chamaremos de pontos projetivos cada uma dessas retas.
 \end{defn}
+Usualmente denotamos esse conjunto por $\PP(\RR)$.
 
-Mas por que chamamos esse conjunto de "reta"? Uma maneira de responder essa pergunta é tomando uma reta $r$ arbitrária (que não passa pela origem) do plano euclidiano e considerando as suas interseções com o feixe de retas que passa pela origem. Isso nos faz escolher um representante para cada ponto projetivo, com exceção do ponto correspondente à reta paralela a $r$, que denotaremos por ponto do infinito. 
+Em termos de álgebra linear, cada um dos elementos de $\PP(\RR)$ é um subespaço de dimensão $1$ do $\RR^2$.
 
-(inserir desenho)
+Duas possíveis perguntas que surgem é : 
+\begin{enumerate}
+    \item Por que chamamos isso
+do mesmo nome da "reta projetiva"  definida anteriormente? %(inserir referencia pra definição de reta projetiva no capítulo sem alglin)
+    \item Se a gente consegue sistema de coordenadas pro $\RR^2$, será que também conseguimos algo parecido para o $\PP(\RR)$?
+\end{enumerate}
 
-Dessa forma, se tomarmos $r$ como sendo a reta de equação $y=1$, podemos escrever
+Começando pela segunda, se temos um sistema de coordenadas pro $\RR^2$ -- ou seja, uma base -- termos que cada vetor $(a,b) \ne (0,0)$ estaria em um único ponto projetivo, contudo cada ponto projetivo possui uma família de vetores que pertencem a ele. Como os pontos projetivos são as retas que passam pela origem, se $(a,b)$ pertencem a um ponto projetivo $P$ então o conjunto de elementos de $P$ são os vetores da forma $\alpha \cdot (a,b), \ \alpha \in \RR$.
 
-$$\mathbb{P}(\mathbb{R})=\{[x,1]\mid x\in \mathbb{R}\}\cup {[1,0]}$$
+Com isso podemos tomar um sistema de coordenadas pro $\PP(\RR)$, mas esse sistema de coordenas é homogêneo, ou seja, a representação de cada ponto não é única, pois $(a,b)$ e $\alpha \cdot (a,b)$ representam o mesmo ponto. Vamos denotar as coordenadas de pontos projetivos entre colchetes, 
 
-Veja que essa definição de ponto do infinito é compatível àquela dada na primeira parte deste livro.
+\begin{exmp}
+De acordo com a nossa definição, os pontos projetivos $[1,0]$, $[0,1]$, $[1,1]$ e $[2,1]$ correspondem respectivamente ao eixo $x$, ao eixo $y$, à reta $y=x$ e à reta $y=\frac{1}{2}x$ do $\RR^2$.
+\end{exmp}
+
+Voltando na primeira pergunta. Mas por que chamamos esse conjunto de "reta"? Uma maneira de responder essa pergunta é dado uma base do $\RR^2$, considerar a reta $y=1$. Com isso podemos tomar como representante para cada ponto projetivo o vetor que leva da origem até a interseção desse ponto projetivo com a reta $y=1$.
+
+(inserir imagem)
+
+Contudo, vemos que exatamente um dos pontos projetivos não tem imagem nessa reta. Para ele vamos escolher o representante $[1,0]$, ou seja:
+
+$$\PP(\RR)=\{[x,1]\mid x\in \RR\}\cup {[1,0]}$$
+
+
+Com isso essa definição é compatível com àquela dada na primeira parte deste livro de uma reta com um ponto extra.
+
+\section{Projetividades}
