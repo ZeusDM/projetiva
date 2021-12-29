@@ -12,19 +12,18 @@ Quando o significado estiver claro, podemos chamar a reta projetiva de reta, e o
 
 Em termos de Álgebra Linear, os pontos da reta projetiva são os subespaços do $\mathbb{R}^2$ com dimensão~$1$.
 
-Dada uma base do \(\mathbb{R}^2\), um vetor pode ser representados por \((a, b)\) nesta base, com \(a, b\) reais.
-Usando essa representação, podemos inferir uma representação dos pontos projetivos da reta projetiva.
-Se \((a, b) \neq (0, 0)\), vamos chamar de \([a, b]\) a única reta que passa pela origem e por \((a, b)\).
-Lembre-se que uma reta no \(\mathbb{R}^2\) é definida por dois pontos distintos; portanto, a reta \([a, b]\) está bem definida.
+Podemos inferir uma representação dos pontos projetivos da reta projetiva a partir dos vetores do \(\mathbb{R}^2\).
+Se \(\mathbf{v} \neq (0, 0)\), vamos chamar de \([\mathbf{v}]\) a única reta que passa pela origem e por \(\mathbf{v}\).
+Lembre-se que uma reta no \(\mathbb{R}^2\) é definida por dois pontos distintos; portanto, a reta \([\mathbf{v}]\) está bem definida.
 
-De modo mais preciso, podemos concluir que \([a, b]\) é o conjunto dos múltiplos reais de \((a, b)\), isto é, é o conjunto \(\{ (\lambda a, \lambda b) : \lambda \in \mathbb{R}\}\).
+De modo mais preciso, podemos concluir que \([\mathbf{v}]\) é o conjunto dos múltiplos reais de \(\mathbf{v}\), isto é, é o conjunto \(\{ \lambda \mathbf{v} : \lambda \in \mathbb{R}\}\).
 
 Porém, essa representação não é única.
-Por exemplo, \([1, 2]\), \([2, 4]\) e \([-1, -2]\) representam o mesmo ponto projetivo, isto é, a mesma reta.
-De modo geral, se \(\lambda \neq 0\), os pontos projetivos \([a, b]\) e \([\lambda a, \lambda b]\) são os mesmos.
+Por exemplo, \([(1, 2)]\), \([(2, 4)]\) e \([(-1, -2)]\) representam o mesmo ponto projetivo, isto é, a mesma reta.
+De modo geral, se \(\lambda \neq 0\), os pontos projetivos \([\mathbf{v}]\) e \([\lambda \mathbf{v}]\) são os mesmos.
 
-Apesar da representação não ser única, temos que \([a, b] = [c, d]\) se, e somente se, \((c, d)\) é um múltiplo real de \((a, b)\).
-Em outras palavras, \([a, b] = [c, d]\) se, e somente se, existe \(\lambda \in \mathbb{R}\) tal que \((c, d) = (\lambda a, \lambda b)\).
+Apesar da representação não ser única, temos que \([\mathbf{v}] = [\mathbf{u}]\) se, e somente se, \(\mathbf{u}\) é um múltiplo real de \(\mathbf{u}\).
+Em outras palavras, \([\mathbf{v}] = [\mathbf{u}]\) se, e somente se, existe \(\lambda \in \mathbb{R}\) tal que \(\mathbf{u} = \lambda\mathbf{v}\).
 
 Portanto, o sistema de coordenadas da reta projetiva é um pouco diferente do sistema que estamos acostumados, mas continua sendo útil mesmo assim. Chamamos sistemas como esse, em que múltiplicar por um escalar não muda o ponto, de \emph{sistema de coordenadas homogêneas}.
 
@@ -37,8 +36,8 @@ Mas por que chamamos a reta projetiva de ``reta''? Uma maneira de responder essa
 (inserir imagem)
 
 Contudo, vemos que exatamente um dos pontos projetivos, a reta \(y = 0\), não intersecta a reta \(y = 1\).
-Para essa reta, vamos escolher o representante $[1,0]$.
-Portanto, \[\mathbb{P}^1\mathbb{R} = \{ [x,1] : x \in \mathbb{R} \} \cup \{[1,0]\},\]
+Para essa reta, vamos escolher o representante $[(1,0)]$.
+Portanto, \[\mathbb{P}^1\mathbb{R} = \{ [(x,1)] : x \in \mathbb{R} \} \cup \{[(1,0)]\},\]
 ou seja, podemos interpretar reta projetiva real como uma reta real com um ponto extra.
 
 \section{Projetividades}
