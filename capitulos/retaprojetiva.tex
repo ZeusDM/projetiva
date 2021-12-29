@@ -45,18 +45,51 @@ ou seja, podemos interpretar reta projetiva real como uma reta real com um ponto
 No \(\mathbb{R}^2\), temos liberdade para escolher dois vetores (linearmente independentes) \(\mathbf{v_1}\) e \(\mathbf{v_2}\) e chamá-los de \((1, 0)\) e \((0, 1)\), respectivamente.
 Feito isso, todos os outros vetores do \(\mathbb{R}^2\) estão unicamente definidos.
 
-Na reta projetiva, podemos fazer algo parecido. Dados dois pontos projetivos \(P_1 = [\mathbf{v_1}]\) e \(P_2 = [\mathbf{v_2}]\), podemos escolher uma base para o \(\mathbb{R}^2\) de modo que \(\mathbf{v_1}\) e \(\mathbf{v_2}\) são representados por \((1, 0)\) e \((0, 1)\), respectivamente.
-Desse modo, \(P_1 = [(1, 0)]\) e  \(P_2 = [(0, 1)]\).
+Na reta projetiva, podemos fazer algo parecido. Dados dois pontos projetivos \(A = [\mathbf{v_1}]\) e \(B = [\mathbf{v_2}]\), podemos escolher uma base para o \(\mathbb{R}^2\) de modo que \(\mathbf{v_1}\) e \(\mathbf{v_2}\) são representados por \((1, 0)\) e \((0, 1)\), respectivamente.
+Desse modo, \(A = [(1, 0)]\) e  \(B = [(0, 1)]\).
 
-Porém, se tivéssemos escolhido a base do \(\mathbb{R}^2\) para serem os vetores \(3\mathbf{v_1}\) e  \(5\mathbf{v_2}\); também concluiríamos que \(P_1 = [(1, 0)] \) e \(P_2 = [(0, 1)]\). Parece que temos mais liberdade na reta projetiva do que em \(\mathbb{R}^2\). Com isso, estamos prontos para o primeiro teorema sobre a reta projetiva.
+Porém, se tivéssemos escolhido a base do \(\mathbb{R}^2\) para serem os vetores \(3\mathbf{v_1}\) e  \(5\mathbf{v_2}\); também concluiríamos que \(A = [(1, 0)] \) e \(B = [(0, 1)]\). Parece que temos mais liberdade na reta projetiva do que em \(\mathbb{R}^2\). Com isso, estamos prontos para o primeiro teorema sobre a reta projetiva.
 
-\begin{thm}
-  Dados três pontos projetivos distintos \(P_1\), \(P_2\) e \(P_3\), podemos escolher uma base apropriada do \(\mathbb{R}^2\) para a qual \(P_1 = [(1, 0)]\),  \(P_2 = [(0, 1)]\) e \(P_3 = [(1, 1)]\).
+\begin{thm}\label{thm:trespontos}
+  Dados três pontos projetivos distintos \(A\), \(B\) e \(C\), podemos escolher uma base apropriada do \(\mathbb{R}^2\) para a qual \(A = [(1, 0)]\),  \(B = [(0, 1)]\) e \(C = [(1, 1)]\).
 \end{thm}
 \begin{proof}
-  Existem vetores \(\mathbf{v_1}\), \(\mathbf{v_2}\) e \(\mathbf{v_3}\) no \(\mathbb{R}^2\) para os quais \(P_1 = [\mathbf{v_1}]\), \(P_2 = [\mathbf{v_2}]\) e \(P_3 = [\mathbf{v_3}]\).
+  Existem vetores \(\mathbf{v_1}\), \(\mathbf{v_2}\) e \(\mathbf{v_3}\) no \(\mathbb{R}^2\) para os quais \(A = [\mathbf{v_1}]\), \(B = [\mathbf{v_2}]\) e \(C = [\mathbf{v_3}]\).
 
-  Considere a base \(\beta = \{\mathbf{v_1}, \mathbf{v_2}\}\) do \(\mathbb{R}^2\). Nessa base, \(P_1 = [(1, 0)]\),  \(P_2 = [(0, 1)]\) e \(P_3 = [(\lambda, 1)]\), para algum \(\lambda \in \mathbb{R}\).
+  Considere a base \(\beta = \{\mathbf{v_1}, \mathbf{v_2}\}\) do \(\mathbb{R}^2\). Nessa base, \(A = [(1, 0)]\),  \(B = [(0, 1)]\) e \(C = [(\lambda, 1)]\), para algum \(\lambda \in \mathbb{R}\).
 
-  Considere a base \(\gamma = \{\lambda\mathbf{v_1}, \mathbf{v_2}\}\) do \(\mathbb{R}^2\). Nessa segunda base, \(P_1 = [(1, 0)]\),  \(P_2 = [(0, 1)]\) e \(P_3 = [(1, 1)]\), como desejado.
+  Considere a base \(\gamma = \{\lambda\mathbf{v_1}, \mathbf{v_2}\}\) do \(\mathbb{R}^2\). Nessa segunda base, \(A = [(1, 0)]\),  \(B = [(0, 1)]\) e \(C = [(1, 1)]\), como desejado.
 \end{proof}
+
+\section{Razão Cruzada}
+
+Nessa seção, vamos deixar o Teorema \ref{thm:trespontos} um pouco mais forte: se adicionarmos um quarto ponto projetivo \(D\), a representação dele em coordenadas estará unicamente definida (ignorando multiplicação por escalar).
+
+Como abuso de notação, escreveremos \([a, b]\) para querer dizer \([(a, b)]\). É importante lembrar que essa representação depende da base escolhida para \(\mathbb{R}^2\).
+
+\begin{thm}\label{thm:trespontosdefinem}
+  Dados quatro pontos projetivos distintos \(A\), \(B\), \(C\) e \(D\), existe um único \(\lambda \in \mathbb{R}\) tal que, se \(\beta\) é uma base do \(\mathbb{R}^2\) satisfazendo \(A = [1, 0]\), \(B = [0, 1]\) e \(C = [1, 1]\), então \(D = [\lambda, 1]\).
+\end{thm}
+\begin{proof}
+  Suponha que \(\beta = \{\mathbf{v_1}, \mathbf{v_2}\}\) e \(\gamma = \{\mathbf{u_1}, \mathbf{u_2}\}\) são bases de \(\mathbb{R}\) satisfazendo as condições, isto é, tais que
+  \begin{align*}
+    A &= [\mathbf{v_1}] = [\mathbf{u_1}], \\
+    B &= [\mathbf{v_2}] = [\mathbf{u_2}], \\
+    C &= [\mathbf{v_1} + \mathbf{v_2}] = [\mathbf{u_1} + \mathbf{u_2}].
+  \end{align*}
+
+  Isso implica que existem constantes reais \(a, b, c\) tais que
+  \begin{align*}
+    \mathbf{u_1} &= a \mathbf{v_1}, \\
+    \mathbf{u_2} &= b \mathbf{v_2}, \\
+    \mathbf{u_1} + \mathbf{u_2} &= c \left(\mathbf{v_1} + \mathbf{v_2}\right).
+  \end{align*}
+
+  Note que \((a - c)\mathbf{v_1} + (b - c)\mathbf{v_2} = \mathbf{0}\) e, consequentemente, \(a = b = c\).
+
+  Finalmente, se \(D = [\lambda\mathbf{v_1} + \mathbf{v_2}]\), concluímos que \(D = [a\left(\lambda\mathbf{v_1} + \mathbf{v_2}\right)] = [\lambda\mathbf{u_1} + \mathbf{u_2}]\). Portanto, \(D = [\lambda, 1]\) em ambas as bases \(\beta\) e \(\gamma\); ou seja, independentemente da base, \(\lambda\) está unicamente definido.
+\end{proof}
+
+\begin{defn}[Razão Cruzada]\label{defn:razaocruzada}
+  Dados quatro pontos projetivos \(A\), \(B\), \(C\) e \(D\), a \emph{razão cruzada dos pontos \(A\), \(B\), \(C\) e \(D\)}, denotada por \((A, B; C, D)\) é definida pelo número real \(\lambda\) achado no Teorema \ref{thm:trespontosdefinem}.
+\end{defn}
