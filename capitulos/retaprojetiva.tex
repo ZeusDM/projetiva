@@ -40,4 +40,23 @@ Para essa reta, vamos escolher o representante $[(1,0)]$.
 Portanto, \[\mathbb{P}^1\mathbb{R} = \{ [(x,1)] : x \in \mathbb{R} \} \cup \{[(1,0)]\},\]
 ou seja, podemos interpretar reta projetiva real como uma reta real com um ponto extra.
 
-\section{Projetividades}
+\section{Mudança de Base}
+
+No \(\mathbb{R}^2\), temos liberdade para escolher dois vetores (linearmente independentes) \(\mathbf{v_1}\) e \(\mathbf{v_2}\) e chamá-los de \((1, 0)\) e \((0, 1)\), respectivamente.
+Feito isso, todos os outros vetores do \(\mathbb{R}^2\) estão unicamente definidos.
+
+Na reta projetiva, podemos fazer algo parecido. Dados dois pontos projetivos \(P_1 = [\mathbf{v_1}]\) e \(P_2 = [\mathbf{v_2}]\), podemos escolher uma base para o \(\mathbb{R}^2\) de modo que \(\mathbf{v_1}\) e \(\mathbf{v_2}\) são representados por \((1, 0)\) e \((0, 1)\), respectivamente.
+Desse modo, \(P_1 = [(1, 0)]\) e  \(P_2 = [(0, 1)]\).
+
+Porém, se tivéssemos escolhido a base do \(\mathbb{R}^2\) para serem os vetores \(3\mathbf{v_1}\) e  \(5\mathbf{v_2}\); também concluiríamos que \(P_1 = [(1, 0)] \) e \(P_2 = [(0, 1)]\). Parece que temos mais liberdade na reta projetiva do que em \(\mathbb{R}^2\). Com isso, estamos prontos para o primeiro teorema sobre a reta projetiva.
+
+\begin{thm}
+  Dados três pontos projetivos distintos \(P_1\), \(P_2\) e \(P_3\), podemos escolher uma base apropriada do \(\mathbb{R}^2\) para a qual \(P_1 = [(1, 0)]\),  \(P_2 = [(0, 1)]\) e \(P_3 = [(1, 1)]\).
+\end{thm}
+\begin{proof}
+  Existem vetores \(\mathbf{v_1}\), \(\mathbf{v_2}\) e \(\mathbf{v_3}\) no \(\mathbb{R}^2\) para os quais \(P_1 = [\mathbf{v_1}]\), \(P_2 = [\mathbf{v_2}]\) e \(P_3 = [\mathbf{v_3}]\).
+
+  Considere a base \(\beta = \{\mathbf{v_1}, \mathbf{v_2}\}\) do \(\mathbb{R}^2\). Nessa base, \(P_1 = [(1, 0)]\),  \(P_2 = [(0, 1)]\) e \(P_3 = [(\lambda, 1)]\), para algum \(\lambda \in \mathbb{R}\).
+
+  Considere a base \(\gamma = \{\lambda\mathbf{v_1}, \mathbf{v_2}\}\) do \(\mathbb{R}^2\). Nessa segunda base, \(P_1 = [(1, 0)]\),  \(P_2 = [(0, 1)]\) e \(P_3 = [(1, 1)]\), como desejado.
+\end{proof}
