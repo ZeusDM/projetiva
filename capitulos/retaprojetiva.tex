@@ -93,3 +93,54 @@ Como abuso de notação, escreveremos \([a, b]\) para querer dizer \([(a, b)]\).
 \begin{defn}[Razão Cruzada]\label{defn:razaocruzada}
   Dados quatro pontos projetivos \(A\), \(B\), \(C\) e \(D\), a \emph{razão cruzada dos pontos \(A\), \(B\), \(C\) e \(D\)}, denotada por \((A, B; C, D)\) é definida pelo número real \(\lambda\) achado no Teorema \ref{thm:trespontosdefinem}.
 \end{defn}
+
+\begin{exmp}
+Dada uma escolha qualquer de coordenadas para a reta projetiva, tal que: $A = [x_A,y_A],B = [x_B,y_B],C = [x_C,y_C],D = [x_D,y_D]$, calcule $(A,B;C,D)$.
+\end{exmp}
+
+\begin{proof}
+  Para isso precisamos trocar a base do $\RR^2$ de tal modo que o vetor $(x_A,y_A)$ vá num múltiplo do vetor $(1,0)$, o vetor $(x_B,y_B)$ vá num múltiplo do vetor $(0,1)$ e o vetor $(x_C,y_C)$ vá num múltiplo do vetor $(1,1)$, se $M$ é a matriz de mudança de base, temos que:
+    \begin{align*}
+        \alpha \pvector{1}{0}{}  = M \pvector{x_A}{y_A}{} \\
+        \beta \pvector{0}{1}{} = M \pvector{x_B}{y_B}{} \\
+        \gamma \pvector{1}{1}{} = M \pvector{x_C}{y_C}{}
+    \end{align*} 
+Note que a com a primeira e a segunda temos,
+
+\[ M^{-1} = \begin{pmatrix}
+    \frac{1}{\alpha} x_A& \frac{1}{\beta} x_B\\
+    \frac{1}{\alpha} y_A& \frac{1}{\beta} y_B
+    \end{pmatrix}
+    \implies 
+    \gamma \cdot M^{-1} \pvector{1}{1}{} = \pvector{x_C}{y_C}{} \implies 
+    \begin{pmatrix}
+        x_A& x_B \\
+        y_A& y_B
+    \end{pmatrix}
+    \pvector{1\backslash \alpha}{1\backslash \beta}{}
+    = \pvector{x_C}{y_C}{}
+\]
+Note que como estamos falando de coordenadas projetivas, a $M$ e $kM$ mudam as coordenadas projetivas da mesma forma pois multiplicar por constante o vetor não muda a coordenada projetiva, com isso podemos pegar $M\backslash \gamma$ como nossa matriz e trocar as outras $\alpha$ e $\beta$ para fazer sentido, ou seja, podemos tomar $\gamma = 1$.
+
+Com isso pela regra de Cramer temos:
+
+\[\frac{1}{\alpha} = \frac{x_Cy_B-x_By_C}{x_Ay_B-x_By_A} \text{ e } \frac{1}{\beta} = \frac{x_Ay_C-x_Cy_A}{x_Ay_B-x_By_A}\] 
+Com isso para simplificar a notação tome $\triangle AB = x_Ay_B-x_By_A$, com isso,
+\[ \alpha = \frac{\triangle AB}{\triangle CB} \text{ e } \beta = \frac{\triangle AB}{\triangle AC}\]
+Com isso:
+
+\[ M^{-1} = \frac{1}{\triangle AB} \cdot \begin{pmatrix}
+    \triangle CB \cdot x_A& \triangle AC \cdot x_B \\
+    \triangle CB \cdot y_A& \triangle AC \cdot y_B
+\end{pmatrix}\]
+\[M =  \frac{1}{\triangle AB\triangle CB \triangle AC} \cdot \begin{pmatrix}
+    \triangle AC \cdot y_B & -\triangle AC \cdot x_B \\
+    -\triangle CB \cdot y_A & \triangle CB \cdot x_A
+\end{pmatrix}  
+    \]
+\[ M \pvector{x_D}{y_D}{} =  \frac{1}{\triangle AB\triangle CB \triangle AC} \cdot \pvector{\triangle AC \cdot \triangle DB}{\triangle CB \cdot \triangle AD}{}\]
+
+Com isso temos que o ponto projetivo $D$ agora tem coordenadas,
+\[ \bvector{\triangle AC \cdot \triangle DB}{\triangle CB \cdot \triangle AD}{} = \bvector{\triangle AC \cdot \triangle DB / \triangle CB \cdot \triangle AD}{1}{}\]
+\[ \left. \lambda = \frac{\triangle DB}{\triangle DA} \middle/ \frac{\triangle CB}{\triangle CA}\right.\]
+\end{proof}
