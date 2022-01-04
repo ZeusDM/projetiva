@@ -37,7 +37,11 @@ Mas por que chamamos a reta projetiva de ``reta''? Uma maneira de responder essa
 
 Contudo, vemos que exatamente um dos pontos projetivos, a reta \(y = 0\), não intersecta a reta \(y = 1\).
 Para essa reta, vamos escolher o representante $[(1,0)]$.
-Portanto, \[\mathbb{P}^1\mathbb{R} = \{ [(x,1)] : x \in \mathbb{R} \} \cup \{[(1,0)]\},\]
+Portanto, 
+\begin{equation}
+	\mathbb{P}^1\mathbb{R} = \{ [(x,1)] : x \in \mathbb{R} \} \cup \{[(1,0)]\},
+\end{equation}
+
 ou seja, podemos interpretar reta projetiva real como uma reta real com um ponto extra.
 
 \section{Mudança de Base}
@@ -72,18 +76,18 @@ Como abuso de notação, escreveremos \([a, b]\) para querer dizer \([(a, b)]\).
 \end{thm}
 \begin{proof}
   Suponha que \(\beta = \{\mathbf{v_1}, \mathbf{v_2}\}\) e \(\gamma = \{\mathbf{u_1}, \mathbf{u_2}\}\) são bases de \(\mathbb{R}\) satisfazendo as condições, isto é, tais que
-  \begin{align*}
+  \begin{align}
     A &= [\mathbf{v_1}] = [\mathbf{u_1}], \\
     B &= [\mathbf{v_2}] = [\mathbf{u_2}], \\
     C &= [\mathbf{v_1} + \mathbf{v_2}] = [\mathbf{u_1} + \mathbf{u_2}].
-  \end{align*}
+  \end{align}
 
   Isso implica que existem constantes reais \(a, b, c\) tais que
-  \begin{align*}
+  \begin{align}
     \mathbf{u_1} &= a \mathbf{v_1}, \\
     \mathbf{u_2} &= b \mathbf{v_2}, \\
     \mathbf{u_1} + \mathbf{u_2} &= c \left(\mathbf{v_1} + \mathbf{v_2}\right).
-  \end{align*}
+  \end{align}
 
   Note que \((a - c)\mathbf{v_1} + (b - c)\mathbf{v_2} = \mathbf{0}\) e, consequentemente, \(a = b = c\).
 
@@ -145,7 +149,7 @@ Com isso para simplificar a notação tome $\Delta PQ = x_Py_Q-x_Qy_P$, com isso
 \end{equation}
 
 Com isso,
-\begin{align*}
+\begin{align}
   M &= \begin{pmatrix} \frac{1}{\alpha} x_A& \frac{1}{\beta} x_B\\ \frac{1}{\alpha} y_A& \frac{1}{\beta} y_B \end{pmatrix}^{-1} & \text{usando \ref{eqn:calculorazaocruzada:4}} \\
     &= \gamma\Delta AB \cdot \begin{pmatrix}
     \Delta CB \cdot x_A& \Delta AC \cdot x_B \\
@@ -155,20 +159,36 @@ Com isso,
     \Delta AC \cdot y_B & -\Delta AC \cdot x_B \\
     -\Delta CB \cdot y_A& \Delta CB \cdot x_A
   \end{pmatrix}.
-\end{align*}
+\end{align}
 
 Consequentemente, podemos calcular as coordenadas do vetor \((x_D, y_D)\) na nova base.
-\[ M \pvector{x_D}{y_D}{} =  \frac{\gamma}{\Delta CB \Delta AC} \cdot \pvector{\Delta AC \cdot \Delta DB}{\Delta CB \cdot \Delta AD}{}\]
+
+\begin{equation}
+	 M \pvector{x_D}{y_D}{} =  \frac{\gamma}{\Delta CB \Delta AC} \cdot \pvector{\Delta AC \cdot \Delta DB}{\Delta CB \cdot \Delta AD}{}
+\end{equation}
+
 
 Com isso temos que o ponto projetivo $D$, na nova base, tem coordenadas
-\[ \bvector{\Delta AC \cdot \Delta DB}{\Delta CB \cdot \Delta AD}{} = \bvector{\Delta AC \cdot \Delta DB / \Delta CB \cdot \Delta AD}{1}{},\]
+
+\begin{equation}
+	 \bvector{\Delta AC \cdot \Delta DB}{\Delta CB \cdot \Delta AD}{} = \bvector{\Delta AC \cdot \Delta DB / \Delta CB \cdot \Delta AD}{1}{},
+\end{equation}
+
 e, portanto, a razão cruzada é
-\[ (A, B; C, D) = \left. \frac{\Delta AC}{\Delta AD} \middle/ \frac{\Delta BC}{\Delta BD}\right..\]
+
+\begin{equation}
+	 (A, B; C, D) = \left. \frac{\Delta AC}{\Delta AD} \middle/ \frac{\Delta BC}{\Delta BD}\right..
+\end{equation}
+
 \end{sol}
 
 \begin{cor}
 Dada uma base \(\beta\) do \(\mathbb{R}^2\), considere os pontos projetivos $A = [x_A,1]$, $B = [x_B,1]$, $C = [x_C,1]$, $D = [x_D,1]$.
 Então,
-\[ (A, B; C, D) = \left. \frac{(x_A - x_C)}{(x_A - x_D)} \middle/ \frac{(x_B - x_C)}{(x_B - x_D)}\right..\]
+
+\begin{equation}
+	 (A, B; C, D) = \left. \frac{(x_A - x_C)}{(x_A - x_D)} \middle/ \frac{(x_B - x_C)}{(x_B - x_D)}\right..
+\end{equation}
+
 \end{cor}
 
