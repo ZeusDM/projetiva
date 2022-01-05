@@ -99,7 +99,7 @@ Como abuso de notação, escreveremos \([a, b]\) para querer dizer \([(a, b)]\).
     \mathbf{u_1} + \mathbf{u_2} &= c \left(\mathbf{v_1} + \mathbf{v_2}\right).
   \end{align}
 
-  Note que \((a - c)\mathbf{v_1} + (b - c)\mathbf{v_2} = \mathbf{0}\) e, consequentemente, \(a = b = c\).
+  Note que \((a - c)\mathbf{v_1} + (b - c)\mathbf{v_2} = \mathbf{0}\) e, como \(\mathbf{v_1}\), \(\mathbf{v_2}\) são linearmente independentes, temos que \(a = b = c\).
 
   Finalmente, se \(D = [d\mathbf{v_1} + \mathbf{v_2}]\), concluímos que \(D = [a\left(d\mathbf{v_1} + \mathbf{v_2}\right)] = [d\mathbf{u_1} + \mathbf{u_2}]\). Portanto, \(D = [d, 1]\) em ambas as bases \(\beta\) e \(\gamma\); ou seja, independentemente da base, \(d\) está unicamente definido.
 \end{proof}
@@ -108,11 +108,17 @@ Como abuso de notação, escreveremos \([a, b]\) para querer dizer \([(a, b)]\).
   Dados quatro pontos projetivos \(A\), \(B\), \(C\) e \(D\), a \emph{razão cruzada dos pontos \(A\), \(B\), \(C\) e \(D\)}, denotada por \((A, B; C, D)\) é definida pelo número real \(d\) achado no Teorema \ref{thm:trespontosdefinem}.
 \end{defn}
 
+\begin{prop}
+  Se \((A, B; C, D) = (A, B; C, E) = d\), então  \(D = E\).
+\end{prop}
+\begin{proof}
+  Escolha a base \(\beta\) como descrita no Teorema \ref{thm:trespontosdefinem}. Ambos pontos \(D\) e \(E\) são \([d, 1]\) na base \(\beta\); consequentemente \(D = E\).
+\end{proof}
+
 \begin{exer}
 Dada uma base \(\beta\) do \(\mathbb{R}^2\), considere os pontos projetivos $A = [x_A,y_A]$, $B = [x_B,y_B]$, $C = [x_C,y_C]$, $D = [x_D,y_D]$.
 Calcule $(A,B;C,D)$.
 \end{exer}
-
 \begin{sol}
   Para calcular a razão cruzada, precisamos construir uma base do $\mathbb{R}^2$ de tal modo que o vetor $(x_A,y_A)$ vá num múltiplo do vetor $(1,0)$, o vetor $(x_B,y_B)$ vá num múltiplo do vetor $(0,1)$ e o vetor $(x_C,y_C)$ vá num múltiplo do vetor $(1,1)$.
   Portanto, queremos achar constantes reais \(\alpha\), \(\beta\) e \(\gamma\), e uma matriz de mudança de base \(M\), tais que 
