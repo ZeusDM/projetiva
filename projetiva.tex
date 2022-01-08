@@ -7,6 +7,7 @@
 }
 \usepackage[brazilian]{babel}	% Traduz as coisas automáticas (como datas, capítulos, etc) para PT-BR.
 \usepackage{csquotes}
+\usepackage{lmodern}
 \usepackage{enumitem}			% Cria listas maneiras.
 \usepackage{amsmath, amssymb, amsfonts}	% Packages da American Mathematical Society.
 \usepackage[dvipsnames]{xcolor}
@@ -18,7 +19,7 @@
 	urlcolor=NavyBlue,
 	menucolor=Red,
 	runcolor=Red}
- 
+\usepackage{graphicx} 
 \usepackage{biblatex}
 \addbibresource{referencias.bib}
 
@@ -28,12 +29,14 @@
 \newtheorem{prop}[thm]{Proposição}
 \newtheorem{lem}[thm]{Lema}
 \newtheorem{cor}[thm]{Corolário}
-\newtheorem{exer}{Exercício}[chapter]
+\newtheorem{exer}[thm]{Exercício}
 \newtheorem*{que}{Questão}
 \theoremstyle{definition}
 \newtheorem{defn}[thm]{Definição}
 \newtheorem{pdefn}[thm]{Proposta de Definição}
 \newtheorem{exmp}{Exemplo}[chapter]
+\theoremstyle{remark}
+\newtheorem*{sol}{Solução}
 
 \newcommand{\RR}{\mathbb{R} }
 \newcommand{\KK}{\mathbb{K} }
@@ -58,7 +61,7 @@
 
 \title{Geometria no Plano Projetivo}
 \author{}
-\date{}
+\date{Versão atualizada em \today}
 
 % O seguinte comando diz quais "\include"s levar a sério, e quais desconsiderar.
 % É útil mexer nisso para o TeX não precisar compilar o arquivo completo, caso você esteja mexendo em somente um capítulo.
@@ -73,16 +76,16 @@
 
 	\part{Abordagem sem Coordenadas}
 
-	\include{capitulos/desarmonia}
-	\include{capitulos/definicao}
+	%\include{capitulos/desarmonia}
+	%\include{capitulos/definicao}
 
 	\part{Abordagem com Coordenadas}
 
 	\include{capitulos/algebralinear}
 	\include{capitulos/retaprojetiva}
 	\include{capitulos/planoprojetivo}
-	\include{capitulos/projecoeseprojetividades}
-	\include{capitulos/conicasepolaridades}
+	%\include{capitulos/projecoeseprojetividades}
+	%\include{capitulos/conicasepolaridades}
 
 	\printbibliography
 

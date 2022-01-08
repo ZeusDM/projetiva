@@ -1,1 +1,42 @@
 \chapter{Plano Projetivo}
+
+\section{Definição}
+
+\begin{defn}[Plano Projetivo Real] \label{defn:planoprojetivoreal}
+O \emph{plano projetivo real \(\mathbb{P}^2(\mathbb{R})\)} é o conjunto das retas do \(\mathbb{R}^3\) que passam pela origem.
+Elementos do plano projetivo real são chamados de \emph{pontos projetivos}.
+\end{defn}
+
+Essa definição é completamente análoga à Definição \ref{defn:retaprojetivareal}; apenas aumentamos uma dimensão.
+
+Como um abuso de notação, chamaremos o plano projetivo real somente de plano projetivo.
+Quando o significado estiver claro, podemos chamar o plano projetivo de plano.
+
+Em termos de Álgebra Linear, os pontos do plano projetivo são os subespaços do \(\mathbb{R}^3\) com dimensão~\(1\).
+
+Podemos inferir uma representação dos pontos projetivos do plano projetivo a partir dos vetores do \(\mathbb{R}^3\), de modo completamente análogo ao que fizemos na Seção \ref{sec:defnretaprojetiva}.
+
+Se \(\mathbf{v} \neq (0, 0, 0)\), vamos chamar de \([\mathbf{v}]\) a única reta que passa pela origem e por \(\mathbf{v}\); equivalentemente, também podemos definir \([\mathbf{v}]\) como \(\langle v \rangle\), o subespaço do \(\mathbb{R}^3\) gerado por \(\mathbf{v}\).
+Podemos concluir que \([\mathbf{v}]\) é o conjunto dos múltiplos reais de \(\mathbf{v}\), isto é, é o conjunto \(\{ \lambda \mathbf{v} : \lambda \in \mathbb{R}\}\).
+
+Portanto, temos novamente que \([\mathbf{v}] = [\mathbf{u}]\) se, e somente se, \(\mathbf{u}\) é um múltiplo real de \(\mathbf{v}\).
+Em outras palavras, \([\mathbf{v}] = [\mathbf{u}]\) se, e somente se, existe \(\lambda \in \mathbb{R}\) tal que \(\mathbf{u} = \lambda\mathbf{v}\).
+
+Por que chamamos o plano projetivo de ``plano''? Uma maneira de responder essa pergunta é, dada uma base do $\mathbb{R}^3$, considerar o plano $z=1$.
+Com isso, podemos tomar como representante para cada ponto projetivo o vetor que leva da origem até sua interseção com o plano $z=1$.
+
+Contudo, vemos que vários pontos projetivos não intersectam o plano \(z = 1\).
+Mais precisamente, as retas que passam pela origem e estão contidas no plano \(z = 0\) são os pontos projetivos que não possuem representante pela regra acima.
+Porém, o conjunto de pontos projetivos contidos em um plano real possui nome!
+Chamamos esses conjuntos de reta projetiva.
+
+Portanto, podemos interpretar a reta projetiva real como um plano real com uma reta projetiva extra.
+Juntando com o que desenvolvemos na Seção \ref{sec:defnretaprojetiva}, podemos dizer que a reta projetiva real é um plano real, mais uma reta real, mais um ponto extra.
+Podemos ver isso claramente em \ref{eqn:planoprojetivoplanoretaponto}.
+\begin{equation} \label{eqn:planoprojetivoplanoretaponto}
+  \mathbb{P}^2(\mathbb{R}) = \{ [x, y, 1] : x, y \in \mathbb{R} \} \cup \{[x, 1, 0] : x \in \mathbb{R}\} \cup \{[1, 0, 0]\}.
+\end{equation}
+
+\begin{exer}
+  Convença a si mesmo de que a igualdade de conjuntos em \ref{eqn:planoprojetivoplanoretaponto} é verdadeira.
+\end{exer}
