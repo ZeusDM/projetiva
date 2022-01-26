@@ -212,56 +212,45 @@ Então,
 \section{Projetividades na reta projetiva real}
 
 \begin{defn}
-Dada uma transformação linear bijetora \(f\colon \mathbb{R}^2 \to \mathbb{R}^2\), a \emph{projetividade induzida por \(f\)} é a função 
-\begin{equation}
-  [f]:\PP^1(\RR)\to \PP^1(\RR)
-\end{equation}
-da reta projetiva real em si mesma tal que, para todo \(v\in \RR^2\), 
-\begin{equation}
-  [f]([v]) = [f(v)].
-\end{equation}
+Uma \emph{projetividade} é uma função 
+\[[f]:\PP^1(\RR)\to \PP^1(\RR)\]
+da reta projetiva real em si mesma que é \emph{induzida} por uma transformação linear (que por definição é bijetora) \[f:\RR^2\to \RR^2,\]
+no sentido que, para todo $v\in \RR^2$, 
+\[[f]([v]) = [f(v)].\]
 \end{defn}
 
 \begin{thm}[Projetividades preservam razão cruzada]
-Se \([f]:\PP^1(\RR) \to \PP^1(\RR)\) é uma projetividade, então, para todos \(A,B,C,D \in \PP^1(\RR)\) distintos, 
-\begin{equation}
-  (A,B;C,D) = ([f](A),[f](B);[f](C),[f](D)).
-\end{equation}
+Se $[f]:\PP^1(\RR) \to \PP^1(\RR)$ é uma projetividade, então, para todos $A,B,C,D \in \PP^1(\RR)$ dois a dois distintos, 
+\[(A,B,C,D) = ([f](A),[f](B),[f](C),[f](D)).\]
 \end{thm}
 
 \begin{proof}
-Seja \(\alpha = \{\mathbf{a_1},\mathbf{a_2}\}\) uma base de \(\mathbb{R}^2\) tal que \(A = [1, 0]_\alpha\), \(B = [0, 1]_\alpha\), \(C = [1, 1]_\alpha\) e \(D = [d, 1]_\alpha\) (isto é, na base \(\alpha\)).
-Defina \(\mathbf{b_1} = f(\mathbf{a_1})\) e \(\mathbf{b_2} = f(\mathbf{a_1})\).
-Como \(\beta = \{\mathbf{b_1}, \mathbf{b_2}\}\) é uma base de \(\mathbb{R}^2\), temos que para todo \(x, y\in \mathbb{R}\)
-\begin{equation}
-  [f]([x\mathbf{a_1} + y\mathbf{a_2}]) = [x\mathbf{b_1} + y\mathbf{b_2}].
-\end{equation}
+Seja $a = (a_1,a_2)$ uma base de $\RR^2$ tal que \(A = [1, 0]_a\), \(B = [0, 1]_a\), \(C = [1, 1]_a\) e \(D = [d, 1]_a\) (isto é, na base a). Então, como $ b = (b_1,b_2) = (f(a_1), f(a_2))$ é uma base de $\RR^2$, para todo $v\in \RR^2$ 
+\[[f]([v]_a) = [f(v)]_b. \]
 Assim, podemos calcular que 
-\(A = [1, 0]_\beta\), \(B = [0, 1]_\beta\), \(C = [1, 1]_\beta\) e \(D = [d, 1]_\beta\).
+\(A = [1, 0]_b\), \(B = [0, 1]_b\), \(C = [1, 1]_b\) e \(D = [d, 1]_b\).
 \end{proof}
 
 Isso pode levar ao questionamento sobre a existência de funções que preservam a razão cruzada e não são projetividades. Vamos mostrar que de fato projetividades são as únicas funções que satisfazem essa condição.
 
 \begin{lem}
-Para todos \(A,B,C;A',B',C' \in \PP^1(R)\), existe uma única projetividade que leva \(A\) em \(A'\), \(B\) em \(B'\) e \(C\) em \(C'\).
+Para todos $A,B,C;A',B',C' \in \PP^1(R)$, existe uma única projetividade que leva $A$ em $A'$, $B$ em $B'$ e $C$ em $C'$.
 \end{lem}
 
 \begin{proof}
-Sejam \(\alpha = (\alpha_1, \alpha_2)\) uma base de \(\RR^2\) tal que \(A = [1, 0]_\alpha\), \(B = [0, 1]_\alpha\), \(C = [1, 1]_\alpha\) e \(\alpha' = (\alpha'_1, \alpha'_2)\) uma base de \(\RR^2\) tal que \(A' = [1, 0]_{\alpha'}\), \(B' = [0, 1]_{\alpha'}\), \(C' = [1, 1]_{\alpha'}\). Então, se \(f\) é a transformação linear que leva \(\alpha_1\) em \(\alpha_1'\) e \(\alpha_2\) em \(\alpha_2'\), a projetividade induzida por \(f\) satisfaz a essa condição.
+Sejam $\alpha = (\alpha_1, \alpha_2)$ uma base de $\RR^2$ tal que \(A = [1, 0]_\alpha\), \(B = [0, 1]_\alpha\), \(C = [1, 1]_\alpha\) e $\alpha' = (\alpha'_1, \alpha'_2)$ uma base de $\RR^2$ tal que \(A' = [1, 0]_{\alpha'}\), \(B' = [0, 1]_{\alpha'}\), \(C' = [1, 1]_{\alpha'}\). Então, se $f$ é a transformação linear que leva $\alpha_1$ em $\alpha_1'$ e $\alpha_2$ em $\alpha_2'$, a projetividade induzida por $f$ satisfaz a essa condição.
 
-Mas, se \(g\) e \(h\) são projetividades dessa forma, como a razão cruzada é injetora (\ref{prop:rc_inj}),
-\(g(X) = h(X)\) para todo \(X\in \PP^1(\RR)\).
+Mas, se $g$ e $h$ são projetividades dessa forma, como a razão cruzada é injetora (\ref{prop:rc_inj}),
+$g(X) = h(X)$ para todo \(X\in \PP^1(\RR)\).
 \end{proof}
 
 \begin{thm}
-Se \(f:\PP^1(\RR) \to \PP^1(\RR)\) preserva razão cruzada, i.e, para todos \(A,B,C,D\) em \(\PP^1(\RR)\) dois a dois distintos, 
-\begin{equation}
-  (A,B,C,D) = (f(A),f(B),f(C),f(D)),
-\end{equation}
-então \(f\) é uma projetividade.
+Se $f:\PP^1(\RR) \to \PP^1(\RR)$ preserva razão cruzada, i.e, para todos $A,B,C,D$ em $\PP^1(\RR)$ dois a dois distintos, 
+\[(A,B,C,D) = (f(A),f(B),f(C),f(D)),\]
+então $f$ é uma projetividade.
 \end{thm}
 
 \begin{proof}
-Fixe \(A,B,C \in \PP^1(\RR)\) distintos dois a dois.
-Pelo lema anterior, há uma projetividade \(g\) tal que \(g(A) = f(A), g(B) = f(B)\) e \(g(C) = f(C)\). Mas, pela injetividade da razão cruzada, concluímos que \(g(X) = f(X)\) para todo \(x\in \PP^1(\RR)\).
+Fixe $A,B,C \in \PP^1(\RR)$ distintos dois a dois.
+Pelo lema anterior, há uma projetividade $g$ tal que $g(A) = f(A), g(B) = f(B)$ e $g(C) = f(C)$. Mas, pela injetividade da razão cruzada, concluímos que $g(X) = f(X)$ para todo $x\in \PP^1(\RR)$.
 \end{proof}
