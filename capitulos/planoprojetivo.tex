@@ -40,3 +40,26 @@ Podemos ver isso claramente em \ref{eqn:planoprojetivoplanoretaponto}.
 \begin{exer}
   Convença a si mesmo de que a igualdade de conjuntos em \ref{eqn:planoprojetivoplanoretaponto} é verdadeira.
 \end{exer}
+
+\section{Colinearidade e concorrência}
+\begin{defn}
+Dizemos que três pontos projetivos são colineares se eles pertencem a um mesmo plano do $\RR^3$, ou seja, pertencem a mesma reta projetiva.
+\end{defn}
+
+\begin{thm}
+Dada uma base para o $\RR^3$ tal que os pontos do plano projetivo $A$,$B$ e $C$ tem coordenadas $[x_A,y_A,z_A], [x_B,y_B,z_B]$ e $[x_C,y_C,z_C]$ respectivamente. 
+\[A,B \text{ e } C \text{ são colineares} \iff \det \begin{bmatrix} x_A & y_A & z_A \\ x_B & y_B & z_B \\ x_C & y_C & z_C \end{bmatrix} = 0\]
+\end{thm}
+
+\begin{proof}
+Se os pontos são colineares os representantes pertencem ao mesmo plano logo eles são \textit{linearmente dependentes}, com isso temos que o determinante é zero.
+
+Já se o determinante é zero os representantes são \textit{linearmente dependente} logo pertencem ao mesmo plano.
+\end{proof}
+
+Isso mostra que dado $a$ e $b$ representantes fixos para $A$ e $B$ todos os pontos projetivos que são colineares com eles podem ser escritos da forma $\alpha a + \beta b$ com $\alpha,\beta \in \RR$. Ou seja, tomando $a$ e $b$, como "bases" dessa reta, podemos dizer que os pontos dessa reta tem coordenadas $[\alpha,\beta]$ na reta, ou seja coordenadas de uma reta projetiva, isso nos permite calcular razão cruzada de pontos em colineares no plano projetivo.
+
+
+\begin{thm}
+
+\end{thm}
