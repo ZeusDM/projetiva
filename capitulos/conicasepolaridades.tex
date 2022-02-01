@@ -61,3 +61,31 @@ Agora, sem perda de generalidade, suponha $d^2\ne ab$. Então, $\Delta_x$ é uma
 \[-a^2bc + a^2f^2 + abe^2 + acd^2 - 2adef = -a\cdot\det(M) = 0,\]
 logo o $\Delta_x $ é um trinômio do quadrado perfeito em $y$, portanto $P(x,y,z)$ é fatorável.
 \end{proof}
+
+\begin{thm}
+Uma cônica é degenerada se, somente se, existem três pontos colineares pertencentes a ela.
+\end{thm}
+
+\begin{proof}
+Se a cônica é degenerada ela é fatorável, logo existe toda uma reta contida nela, particularmente existem três pontos colineares.
+
+Caso exista três pontos colineares:
+
+Seja $A$,$B$ e $C$ os três pontos colineares contidos na cônica, seja $a$ e $b$ vetores representantes dos pontos $A$ e $B$ respectivamente, com isso temos que $C = [m\cdot a + n \cdot b]$ com $ m,n \ne 0$.
+
+Primeiro, vamos olhar para cônica por sua matriz $M$, sabemos que se $A$, $B$ pertencem a cônica então \(a^T M a = 0 \text{ e } b^T M b = 0\), já como $C$ pertence a cônica temos:
+
+\begin{align}
+    (m\cdot a + n \cdot b)^T M (m\cdot a + n \cdot b) &= 0 \iff\\
+    m^2 a^T M a + mn a^T M b + mn b^T M a + n^2 b^T M b &= 0 \iff \\
+    a^T M b + b^T M a &= 0
+\end{align}
+
+Ou seja, temos que dado um par fixo $m,n$ nós conseguimos mostrar que $ a^T M b + b^T M a = 0$, fazendo o caminho de volta temos que para qualquer $x = \alpha a + \beta b$ com $\alpha,\beta \ne 0$, $x^T M x = 0$, ou seja $X$ pertence a cônica, como $A$ e $B$ já pertencem a cônica provamos que se há três pontos colineares numa cônica todos os pontos desta reta também estão na cônica.
+
+Note que, se $a = (x_a,y_a,z_a)$, $b = (x_b,y_b,z_b)$ e $x_a/x_b = y_a/y_b = z_a/z_b$, $a$ e $b$ representariam o mesmo ponto projetivo logo, sem perda de generalidade, $y_a/y_b \ne z_a/z_b$.
+
+Seja polinômio $C$ dessa cônica, e $R$ o da reta que contém $A$ e $B$, fazendo divisão polinomial na variável $x$, como $R$ tem grau 1 em $x$ temos que:
+\[C(x,y,z) = R(x,y,z)\cdot Q(x,y,z) + P(y,z) \]
+Sendo $P$ um polinômio de grau dois em $y$ e $z$, contudo para qualquer ponto tal que $R(x,y,z) = 0$ temos $C(x,y,z) = 0$ logo $P(y,z) = 0$, contudo como as raízes de $R$ são da forma $\alpha a + \beta b$ e $y_a/y_b \ne z_a/z_b$, temos que as combinação lineares de $a$ e $b$ cobrem todas as escolhas possíveis de $y$ e $z$, logo temos que para todos $y$ e $z$ pertencentes aos reais temos $P(y,z) = 0$, com isso $P \equiv 0$, ou seja $C(x,y,z) = R(x,y,z)\cdot Q(x,y,z)$, logo a cônica é degenerada.
+\end{proof}
