@@ -257,17 +257,37 @@ Pelo lema anterior, há uma projetividade $g$ tal que $g(A) = f(A), g(B) = f(B)$
 
 \section{Involução}
 
+Essa parte só será usada na seção sobre (?), se quiser pode pular e voltar quando chegar nela.
+
 \begin{defn}
 Uma involução da reta nela mesma é uma projetividade que é a inversa de si mesma.
 \end{defn}
 
+\begin{prop}
+Uma involução que tem três pontos fixos é a identidade.
+\end{prop}
+
+\begin{proof}
+Aplicação da proposição \ref{prop:rc_inj}
+\end{proof}
+
 \begin{thm}
-Uma involução não trivial tem zero ou dois pontos fixos. 
+Uma involução que não é a identidade tem zero ou dois pontos fixos. 
 \end{thm}
+
+\begin{proof}
+Se uma involução $\alpha$ tem um ponto fixo $A$ e se $B$ não é ponto fixo tome $A'$ tal que $(A,A';B,\alpha B) = -1$.
+
+Aplicando $\alpha$ temos que $-1 = (A,\alpha A';\alpha B, B) = 1/(A,A';B,\alpha B)$, com isso temos $(A,\alpha A'; B,\alpha B) = (A,A;B,\alpha B)$, ou seja $A'$ é ponto fixo.
+\end{proof}
 
 \begin{thm}
 Se uma involução tem dois pontos fixos, então ela é a conjugação harmônica por eles.
 \end{thm}
+
+\begin{proof}
+Seja $\alpha$ a involução e $A$ e $B$ seus pontos fixos, como para um $X$ qualquer $(A,B,X,\alpha X) = (A,B,\alpha X, X) = 1/(A,B,X,\alpha X)$ temos que $(A,B,X,\alpha X) = -1$
+\end{proof}
 
 \begin{prop}
   Existe uma involução que tem zero pontos fixos
