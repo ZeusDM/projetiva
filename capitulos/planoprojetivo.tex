@@ -41,14 +41,22 @@ Podemos ver isso claramente em \ref{eqn:planoprojetivoplanoretaponto}.
   Convença a si mesmo de que a igualdade de conjuntos em \ref{eqn:planoprojetivoplanoretaponto} é verdadeira.
 \end{exer}
 
+\begin{thm} \label{thm:quatropontos}
+  Dados quatro pontos projetivos distintos \(A\), \(B\), \(C\) e \(D\) podemos escolher uma base apropriada do \(\mathbb{R}^3\) para a qual \(A = [1, 0, 0]\),  \(B = [0, 1, 0]\), \(C = [0, 0, 1]\) e \( D = [1, 1, 1]\)
+\end{thm}
+\begin{proof}
+Prova análoga ao teorema \ref{thm:trespontos} 
+\end{proof}
 \section{Colinearidade e concorrência}
 \begin{defn}
-Dizemos que três pontos projetivos são colineares se eles pertencem a um mesmo plano do $\RR^3$, ou seja, pertencem a mesma reta projetiva.
+Dado um plano que passa pela origem do $\RR^3$, os conjunto de todas as retas contidas nele que passam pela origem, é chamado de \emph{reta projetiva}.
 \end{defn}
+
+Outra forma de pensar a reta projetiva contida no plano projetivo é ver ela como o espaço projetivo derivado de qualquer subespaço vetorial de dimensão dois do $\RR^3$.
 
 \begin{thm}
 Dada uma base para o $\RR^3$ tal que os pontos do plano projetivo $A$,$B$ e $C$ tem coordenadas $[x_A,y_A,z_A], [x_B,y_B,z_B]$ e $[x_C,y_C,z_C]$ respectivamente. 
-\[A,B \text{ e } C \text{ são colineares} \iff \det \begin{bmatrix} x_A & y_A & z_A \\ x_B & y_B & z_B \\ x_C & y_C & z_C \end{bmatrix} = 0\]
+\[A,B \text{ e } C \text{ são colineares (pertencem a uma mesma reta)} \iff \det \begin{bmatrix} x_A & y_A & z_A \\ x_B & y_B & z_B \\ x_C & y_C & z_C \end{bmatrix} = 0\]
 \end{thm}
 
 \begin{proof}
@@ -57,7 +65,28 @@ Se os pontos são colineares os representantes pertencem ao mesmo plano logo ele
 Já se o determinante é zero os representantes são \textit{linearmente dependente} logo pertencem ao mesmo plano.
 \end{proof}
 
-Isso mostra que dado $a$ e $b$ representantes fixos para $A$ e $B$ todos os pontos projetivos que são colineares com eles podem ser escritos da forma $\alpha a + \beta b$ com $\alpha,\beta \in \RR$. Ou seja, tomando $a$ e $b$, como "bases" dessa reta, podemos dizer que os pontos dessa reta tem coordenadas $[\alpha,\beta]$ na reta, ou seja coordenadas de uma reta projetiva, isso nos permite calcular razão cruzada de pontos em colineares no plano projetivo.
+Isso mostra que dado $a$ e $b$ representantes fixos para $A$ e $B$ todos os pontos projetivos que são colineares com eles podem ser escritos da forma $\alpha a + \beta b$ com $\alpha,\beta \in \RR$. Ou seja, tomando $a$ e $b$, como "bases" dessa reta, podemos dizer que os pontos dessa reta tem coordenadas $[\alpha,\beta]$ na reta, ou seja coordenadas de uma reta projetiva, isso nos permite calcular razão cruzada de pontos colineares no plano projetivo.
+
+Contudo, sabemos que um plano no $\RR^3$ pode ser descrito como, dada uma base, o conjunto de vetores $(x,y,z)$ tais que $ax+by+cz = 0$ com $a,b$ e $c$ reais fixos, mas se pegarmos um ponto projetivo qualquer, se um dos representantes dele pertence ao plano então todo o ponto também pertence, ou seja, temos que um ponto projetivo $P = [x,y,z]$ pertence a uma reta projetiva $r$ se, e somente se, vale que $ax+by+cz = 0$, sendo $a,b$ e $c$ relacionados a equação plano real associado $r$, com isso vamos dizer que as coordenadas da reta $r$ são $<a,b,c>$, note também que a coordenada das retas formam um sistema de coordenadas homogêneas pois $<a,b,c>$ e $<2a,2b,2c>$ representam o mesmo plano no $\RR^3$ logo a mesma reta no $\PP^2$
+
+\begin{thm}[Primeiro Teorema de Desargues]
+Dados dois triângulos $ABC$ e $A'B'C'$ as seguintes condições são equivalentes:
+\begin{enumerate}
+    \item $AA'$, $BB'$ e $CC'$ são concorrentes.
+    \item $X = AB \cap A'B'$, $Y = AC\cap A'C'$ e $Z = BC \cap B'C'$ são colineares.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Vamos mostrar que $1 \implies 2$:
+
+Seja $O = AA' \cap BB'$, pelo teorema \ref{thm:quatropontos} vamos tomar $A = [1, 0, 0]$, $B = [0, 1, 0]$, $C = [0, 0, 1]$ e $O = [1, 1, 1]$. Com isso temos que $AO = < 0, 1, -1>$, $BO = < 1, 0, -1>$ e $C) = < 1, -1, 0>$. Com isso temos que $A' = [a,1,1]$, $B' = [1,b,1]$ e $C'= [1,1,c]$, para alguns $a,b$ e $c$ reais. 
+
+Agora vamos calcular $X$, $Y$ e $Z$. Note que: $AB = <0,0,1>$ e $A'B' = <b-1,a-1,1-ab>$, com isso $X = [a,-b,0]$, analogamente temos $Y = [-a,0,c]$ e $Z = [0,b,-c]$, como:
+
+\[\det \begin{bmatrix} a & -b & 0 \\ -a & 0 & c \\ 0 & b & -c \end{bmatrix} = 0 \text{ temos que } X,Y \text{ e } Z \text{ são colineares } \]
+\end{proof}
+
 
 %parte para ser add no futuro
 \begin{lem}[Lema Útil]
@@ -72,13 +101,6 @@ Dada uma projetividade $\alpha$ de uma reta $r$ em outra $s$, seja $X = A\alpha(
 Dado $A$, $B$ e $C$ em uma reta e $A'$, $B'$ e $C'$ em outra, tome $X = AB' \cap A'B$, $Y = AC'\cap A'C$ e $Z = BC' \cap B'C$, temos que $X$, $Y$ e $Z$ são colineares.
 \end{cor}
 
-\begin{thm}[Primeiro Teorema de Desargues]
-Dados dois triângulos $ABC$ e $A'B'C'$ as seguintes condições são equivalentes:
-\begin{enumerate}
-    \item $AA'$, $BB'$ e $CC'$ são concorrentes.
-    \item $X = AB' \cap A'B$, $Y = AC'\cap A'C$ e $Z = BC' \cap B'C$ são colineares.
-\end{enumerate}
-\end{thm}
 
 \begin{thm}[Segundo Teorema de Desargues]
 Dado um quadrilátero $ABCD$ e uma reta fixa $r$, seja $X = AB \cap r$, $X' = CD \cap r$, $Y = AC \cap r$, $Y' = BD \cap r$, $Z = AD \cap r$ e $Z' = BC \cap r$, com isso temos que $(X,X')$, $(Y,Y')$ e $(Z,Z')$ são pares de uma involução na reta $r$.
