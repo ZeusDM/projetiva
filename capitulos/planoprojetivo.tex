@@ -67,6 +67,19 @@ Já se o determinante é zero os representantes são \textit{linearmente depende
 
 Isso mostra que dado $a$ e $b$ representantes fixos para $A$ e $B$ todos os pontos projetivos que são colineares com eles podem ser escritos da forma $\alpha a + \beta b$ com $\alpha,\beta \in \RR$. Ou seja, tomando $a$ e $b$, como "bases" dessa reta, podemos dizer que os pontos dessa reta tem coordenadas $[\alpha,\beta]$ na reta, ou seja coordenadas de uma reta projetiva, isso nos permite calcular razão cruzada de pontos colineares no plano projetivo.
 
+Opção 1
+
+Por outro lado, sabemos que um há uma associação natural entre planos que passam na origem e retas que passam na oridem no $\RR^3$, que se baseia em para cada plano pegar o conjunto de vetores normal a ele, gerando a equação do plano como algo da forma $ax+by+cz = 0$, será que existe algo análogo para retas projetivas?
+
+\begin{thm}
+Dada uma base do $\RR^3$ e uma reta projetiva $r$, existem $a,b$ e $c$ tais que um ponto projetivo $P = [x,y,z]$ pertence a $r$ se, e somente se, $ax+by+cz=0$
+\end{thm}
+\begin{proof}
+Depois eu escrevo
+\end{proof}
+
+Opção 2
+
 Contudo, sabemos que um plano no $\RR^3$ pode ser descrito como, dada uma base, o conjunto de vetores $(x,y,z)$ tais que $ax+by+cz = 0$ com $a,b$ e $c$ reais fixos, mas se pegarmos um ponto projetivo qualquer, se um dos representantes dele pertence ao plano então todo o ponto também pertence, ou seja, temos que um ponto projetivo $P = [x,y,z]$ pertence a uma reta projetiva $r$ se, e somente se, vale que $ax+by+cz = 0$, sendo $a,b$ e $c$ relacionados a equação plano real associado $r$, com isso vamos dizer que as coordenadas da reta $r$ são $<a,b,c>$, note também que a coordenada das retas formam um sistema de coordenadas homogêneas pois $<a,b,c>$ e $<2a,2b,2c>$ representam o mesmo plano no $\RR^3$ logo a mesma reta no $\PP^2$
 
 \begin{thm}[Primeiro Teorema de Desargues]
@@ -87,6 +100,16 @@ Agora vamos calcular $X$, $Y$ e $Z$. Note que: $AB = <0,0,1>$ e $A'B' = <b-1,a-1
 \[\det \begin{bmatrix} a & -b & 0 \\ -a & 0 & c \\ 0 & b & -c \end{bmatrix} = 0 \text{ temos que } X,Y \text{ e } Z \text{ são colineares } \]
 \end{proof}
 
+Agora para mostrar a volta vamos usar outro argumento.
+
+Tome vamos chamar $BC$ de $a$, $AC$ de $b$ e $AB$ de $c$ e o análogo para $A'B'$,$A'C'$ e $B'C'$, vamos chamar $AA'$ de $x$, $BB'$ de $y$ e $CC'$ de $z$, por último vamos chamar $XY$ de $o$.
+
+Note que a ida era, dados $ABC$ e $A'B'C'$, temos que se $AA'$, $BB'$ e $CC'$ concorrem então $AB \cap A'B'$, $AC\cap A'C'$ e $ BC \cap B'C'$ são colineares. Já a volta é temos, dados $abc$ e $a'b'c'$, se $a \cap a'$, $b \cap b'$ e $c\cap c'$ são colineares então as retas $a\cap b \ a'\cap b'$, $a\cap c \ a' \cap c'$ e $ b\cap c \ b'\cap c'$ são concorrentes.
+
+Ou seja, a volta do problema é exatamente a ida "trocando" ponto por reta, e algo curioso do plano projetivo é que uma igualdade do tipo $ax+by+cz=0$ pode ser interpretada como, o ponto $[x,y,z]$ pertence a reta $<a,b,c>$ ou como o ponto $[a,b,c]$ pertence a reta $<x,y,z>$, com isso para resolver a volta a gente vai fazer o seguinte truque:
+
+Escolha uma base qualquer para $\RR^3$, imagine para cada reta que você calcular as coordenadas nos pontos com os mesmos números como coordenadas, no mundo dos pontos nos já sabemos que a conta fecha, e como a conta é exatamente a mesma para um mundo com retas e um mundo com pontos, temos que no munda das retas a conta também fecha, ou seja a volta é uma consequência direta da ia.
+\newpage
 
 %parte para ser add no futuro
 \begin{lem}[Lema Útil]
