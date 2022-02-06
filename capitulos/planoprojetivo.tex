@@ -45,14 +45,20 @@ Podemos ver isso claramente em \ref{eqn:planoprojetivoplanoretaponto}.
   Dados quatro pontos projetivos distintos \(A\), \(B\), \(C\) e \(D\) podemos escolher uma base apropriada do \(\mathbb{R}^3\) para a qual \(A = [1, 0, 0]\),  \(B = [0, 1, 0]\), \(C = [0, 0, 1]\) e \( D = [1, 1, 1]\)
 \end{thm}
 \begin{proof}
-Prova análoga ao teorema \ref{thm:trespontos} 
+Prova análoga ao teorema \ref{thm:trespontos}
 \end{proof}
+
+\begin{comment}
 \section{Colinearidade e concorrência}
 \begin{defn}
 Dado um plano que passa pela origem do $\RR^3$, os conjunto de todas as retas contidas nele que passam pela origem, é chamado de \emph{reta projetiva}.
 \end{defn}
 
 Outra forma de pensar a reta projetiva contida no plano projetivo é ver ela como o espaço projetivo derivado de qualquer subespaço vetorial de dimensão dois do $\RR^3$.
+
+\begin{cor}
+Dado dois pontos distintos existe uma única reta que passa por eles.
+\end{cor}
 
 \begin{thm}
 Dada uma base para o $\RR^3$ tal que os pontos do plano projetivo $A$,$B$ e $C$ tem coordenadas $[x_A,y_A,z_A], [x_B,y_B,z_B]$ e $[x_C,y_C,z_C]$ respectivamente. 
@@ -65,14 +71,15 @@ Se os pontos são colineares os representantes pertencem ao mesmo plano logo ele
 Já se o determinante é zero os representantes são \textit{linearmente dependente} logo pertencem ao mesmo plano.
 \end{proof}
 
-Isso mostra que dado $a$ e $b$ representantes fixos para $A$ e $B$ todos os pontos projetivos que são colineares com eles podem ser escritos da forma $\alpha a + \beta b$ com $\alpha,\beta \in \RR$. Ou seja, tomando $a$ e $b$, como "bases" dessa reta, podemos dizer que os pontos dessa reta tem coordenadas $[\alpha,\beta]$ na reta, ou seja coordenadas de uma reta projetiva, isso nos permite calcular razão cruzada de pontos colineares no plano projetivo.
+Isso mostra que, dados $a$ e $b$ representantes fixos para $A$ e $B$, todos os pontos projetivos que são colineares com eles podem ser escritos da forma $[\alpha a + \beta b]$, com $\alpha,\beta \in \RR$. Assim, tomando $a$ e $b$ como "bases" \ dessa reta, podemos dizer que os pontos dessa reta têm coordenadas $[\alpha,\beta]$ na reta, ou seja, coordenadas de uma reta projetiva, o que nos permite calcular razão cruzada de pontos colineares no plano projetivo.
+
 
 Opção 1
 
-Por outro lado, sabemos que um há uma associação natural entre planos que passam na origem e retas que passam na oridem no $\RR^3$, que se baseia em para cada plano pegar o conjunto de vetores normal a ele, gerando a equação do plano como algo da forma $ax+by+cz = 0$, será que existe algo análogo para retas projetivas?
+Por outro lado, sabemos que um há uma associação natural entre planos que passam na origem e retas que passam na origem no $\RR^3$, que se baseia em para cada plano pegar o conjunto de vetores normal a ele, gerando a equação do plano como algo da forma $ax+by+cz = 0$, será que existe algo análogo para retas projetivas?
 
 \begin{thm}
-Dada uma base do $\RR^3$ e uma reta projetiva $r$, existem $a,b$ e $c$ tais que um ponto projetivo $P = [x,y,z]$ pertence a $r$ se, e somente se, $ax+by+cz=0$
+Dada uma base do $\RR^3$ e uma reta projetiva $r$, existem $a,b$ e $c$ tais que um ponto projetivo $P = [x,y,z]$ pertence a $r$ se, e somente se, $ax+by+cz=0$.
 \end{thm}
 \begin{proof}
 Depois eu escrevo
@@ -82,6 +89,94 @@ Opção 2
 
 Contudo, sabemos que um plano no $\RR^3$ pode ser descrito como, dada uma base, o conjunto de vetores $(x,y,z)$ tais que $ax+by+cz = 0$ com $a,b$ e $c$ reais fixos, mas se pegarmos um ponto projetivo qualquer, se um dos representantes dele pertence ao plano então todo o ponto também pertence, ou seja, temos que um ponto projetivo $P = [x,y,z]$ pertence a uma reta projetiva $r$ se, e somente se, vale que $ax+by+cz = 0$, sendo $a,b$ e $c$ relacionados a equação plano real associado $r$, com isso vamos dizer que as coordenadas da reta $r$ são $<a,b,c>$, note também que a coordenada das retas formam um sistema de coordenadas homogêneas pois $<a,b,c>$ e $<2a,2b,2c>$ representam o mesmo plano no $\RR^3$ logo a mesma reta no $\PP^2$
 
+\subsection{Dualidade}
+
+Vamos chamar de \emph{Dualidade} ($\mathcal{D}$) uma transformação no plano projetivo que, dada uma base do $\RR^3$, manda o ponto com coordenadas $[x,y,z]$ na reta com coordenadas $\langle x,y,z \rangle$.
+
+Vamos chamar de \emph{Dualidade} ($\mathcal{D}$) uma transformação no plano projetivo que, $^T$
+\begin{thm}
+Essa transformação não depende da base escolhida.
+\end{thm}
+
+\begin{thm}
+Se um ponto pertence a reta $\langle x,y,z \rangle$, então sua imagem pertence ao ponto $[x,y,z]$
+\end{thm}
+\begin{proof}
+
+\end{proof}
+Com isso podemos dizer com isso que a transformação leva a reta $\langle x,y,z \rangle$ no ponto $[x,y,z]$
+
+\begin{thm}
+Essa transformação leva pontos colineares em retas concorrentes.
+\end{thm}
+
+\begin{thm}[Primeiro Teorema de Desargues]
+Dados dois triângulos $ABC$ e $A'B'C'$ as seguintes condições são equivalentes:
+\begin{enumerate}
+    \item $AA'$, $BB'$ e $CC'$ são concorrentes.
+    \item $Z = AB \cap A'B'$, $Y = AC\cap A'C'$ e $X = BC \cap B'C'$ são colineares.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}[Demonstração da Ida]
+Vamos mostrar que $1 \implies 2$:
+
+Seja $O = AA' \cap BB'$, pelo teorema \ref{thm:quatropontos} vamos tomar $A = [1, 0, 0]$, $B = [0, 1, 0]$, $C = [0, 0, 1]$ e $O = [1, 1, 1]$. Com isso temos que $AO = < 0, 1, -1>$, $BO = < 1, 0, -1>$ e $C) = < 1, -1, 0>$. Com isso temos que $A' = [a,1,1]$, $B' = [1,b,1]$ e $C'= [1,1,c]$, para alguns $a,b$ e $c$ reais. 
+
+Agora vamos calcular $X$, $Y$ e $Z$. Note que: $AB = <0,0,1>$ e $A'B' = <b-1,a-1,1-ab>$, com isso $Z = [a,-b,0]$, analogamente temos $Y = [-a,0,c]$ e $X = [0,b,-c]$, como:
+
+\[\det \begin{bmatrix} a & -b & 0 \\ -a & 0 & c \\ 0 & b & -c \end{bmatrix} = 0 \text{ temos que } X,Y \text{ e } Z \text{ são colineares } \]
+\end{proof}
+
+\begin{proof}[Demonstração da Volta]
+Agora para mostrar a volta vamos usar outro argumento.
+
+Tome vamos chamar $BC$ de $a$, $AC$ de $b$ e $AB$ de $c$ e o análogo para $A'B'$,$A'C'$ e $B'C'$, vamos chamar $AA'$ de $x$, $BB'$ de $y$ e $CC'$ de $z$, por último vamos chamar $XY$ de $o$.
+
+Note que a ida era, dados $ABC$ e $A'B'C'$, temos que se $AA'$, $BB'$ e $CC'$ concorrem então $AB \cap A'B'$, $AC\cap A'C'$ e $ BC \cap B'C'$ são colineares. Já a volta é temos, dados $abc$ e $a'b'c'$, se $a \cap a'$, $b \cap b'$ e $c\cap c'$ são colineares então as retas $a\cap b \ a'\cap b'$, $a\cap c \ a' \cap c'$ e $ b\cap c \ b'\cap c'$ são concorrentes.
+
+Ou seja, a volta do problema é exatamente a ida "trocando" ponto por reta, e algo curioso do plano projetivo é que uma igualdade do tipo $ax+by+cz=0$ pode ser interpretada como, o ponto $[x,y,z]$ pertence a reta $<a,b,c>$ ou como o ponto $[a,b,c]$ pertence a reta $\langle x,y,z\rangle$, com isso para resolver a volta a gente vai fazer o seguinte truque:
+
+Escolha uma base qualquer para $\RR^3$, imagine para cada reta que você calcular as coordenadas nos pontos com os mesmos números como coordenadas, no mundo dos pontos nos já sabemos que a conta fecha, e como a conta é exatamente a mesma para um mundo com retas e um mundo com pontos, temos que no munda das retas a conta também fecha, ou seja a volta é uma consequência direta da ida.
+\end{proof}
+\end{comment}
+
+\section{Colinearidade e Concorrência opção 2}
+
+Nessa seção, fixaremos uma base do \(\RR^3\).
+
+Fixe um plano $\alpha$ do \(\RR^3\) que passe pela origem. 
+Vamos restringir nosso estudo do \(\PP^2(\RR)\); que lembre-se, é o conjunto de todas as retas do \(\RR^3\) que passam pela origem; ao conjunto dessas retas que estão contidas em $\alpha$. 
+
+% Inserir imagem.
+
+Note que, como $\alpha$ possui a estrutura do $\RR^2$, esse conjunto possui a mesma estrutura da reta projetiva definida anteriormente.
+
+Note que $\alpha$ pode ser parametrizado por três parâmetros reais $a, b, c$, não todos nulos, de modo que $\alpha$ seja o conjunto dos pontos $(x, y, z) \in \RR$ tais que \[
+    ax + by + cz = 0.
+\]
+Perceba que o plano definido pelos parâmetros $a, b, c$ é o mesmo plano definido pelos parâmetros $\lambda a, \lambda b, \lambda c$, para qualquer real não nulo $\lambda$. Dessa forma, podemos associar o plano $\alpha$ à tripla $\langle a, b, c \rangle$, formando um sistema de coordenadas homogêneas.
+
+Isso nos leva à seguinte definição.
+
+\begin{defn}[Reta Projetiva e Incidência]
+Definimos uma \emph{reta projetiva do \(\PP^2(\RR)\)} como sendo uma tripla de coordenadas reais homogêneas $\langle a, b, c \rangle$.
+
+Dizemos que um ponto projetivo $[x, y, z]$ incide em uma reta projetiva $\langle a, b, c\rangle$ quando \[
+ax + by + cz = 0.
+\]
+\end{defn}
+
+É importante notar que a relação de incidência não depende do representante que escolhemos para o ponto projetiva ou para a reta projetiva; portanto, essa relação está bem definida.
+
+\subsection{Dualidade}
+
+Dualidade é uma relação entre pontos projetivos e retas projetivas. Associamos o ponto projetivo $[x, y, z]$ à reta projetiva $\langle x, y, z\rangle$. É importante ressaltar que essa relação depende da base do \(\RR^3\).
+
+\begin{prop}
+    Se um ponto projetivo $P$ incide em uma reta projetiva $\ell$, então o ponto projetivo dual de $\ell$ incide sobre a reta projetiva dual de $P$.
+\end{prop}
+
 \begin{thm}[Primeiro Teorema de Desargues]
 Dados dois triângulos $ABC$ e $A'B'C'$ as seguintes condições são equivalentes:
 \begin{enumerate}
@@ -90,7 +185,7 @@ Dados dois triângulos $ABC$ e $A'B'C'$ as seguintes condições são equivalent
 \end{enumerate}
 \end{thm}
 
-\begin{proof}
+\begin{proof}[Demonstração da Ida]
 Vamos mostrar que $1 \implies 2$:
 
 Seja $O = AA' \cap BB'$, pelo teorema \ref{thm:quatropontos} vamos tomar $A = [1, 0, 0]$, $B = [0, 1, 0]$, $C = [0, 0, 1]$ e $O = [1, 1, 1]$. Com isso temos que $AO = < 0, 1, -1>$, $BO = < 1, 0, -1>$ e $C) = < 1, -1, 0>$. Com isso temos que $A' = [a,1,1]$, $B' = [1,b,1]$ e $C'= [1,1,c]$, para alguns $a,b$ e $c$ reais. 
@@ -100,18 +195,14 @@ Agora vamos calcular $X$, $Y$ e $Z$. Note que: $AB = <0,0,1>$ e $A'B' = <b-1,a-1
 \[\det \begin{bmatrix} a & -b & 0 \\ -a & 0 & c \\ 0 & b & -c \end{bmatrix} = 0 \text{ temos que } X,Y \text{ e } Z \text{ são colineares } \]
 \end{proof}
 
-Agora para mostrar a volta vamos usar outro argumento.
+\begin{proof}[Demonstração da Volta]
+Suponha agora que valha a condição $2$.
+Sejam \(u = BC\), \(v = AC\), \(w = AB\); \(u' = B'C'\), \(v' = A'C'\), \(w' = A'B'\); \(p = AA'\), \(q = BB'\) e \(r = CC'\). Considere os duais $U,V,W,U',V',W',P,Q,R$ (respectivamente) dessas $9$ retas. Note que, como $X,Y,Z$ são colineares e dualidade preserva incidência, $UU', VV'$ e $WW'$ são concorrentes. Assim, aplicando a ida a $\Delta UVW$ e $\Delta U'V'W'$, concluímos que $P,Q$ e $R$ são colineares, o que equivale a $p,q$ e $r$ serem concorrentes.
+\end{proof}
 
-Tome vamos chamar $BC$ de $a$, $AC$ de $b$ e $AB$ de $c$ e o análogo para $A'B'$,$A'C'$ e $B'C'$, vamos chamar $AA'$ de $x$, $BB'$ de $y$ e $CC'$ de $z$, por último vamos chamar $XY$ de $o$.
 
-Note que a ida era, dados $ABC$ e $A'B'C'$, temos que se $AA'$, $BB'$ e $CC'$ concorrem então $AB \cap A'B'$, $AC\cap A'C'$ e $ BC \cap B'C'$ são colineares. Já a volta é temos, dados $abc$ e $a'b'c'$, se $a \cap a'$, $b \cap b'$ e $c\cap c'$ são colineares então as retas $a\cap b \ a'\cap b'$, $a\cap c \ a' \cap c'$ e $ b\cap c \ b'\cap c'$ são concorrentes.
-
-Ou seja, a volta do problema é exatamente a ida "trocando" ponto por reta, e algo curioso do plano projetivo é que uma igualdade do tipo $ax+by+cz=0$ pode ser interpretada como, o ponto $[x,y,z]$ pertence a reta $<a,b,c>$ ou como o ponto $[a,b,c]$ pertence a reta $<x,y,z>$, com isso para resolver a volta a gente vai fazer o seguinte truque:
-
-Escolha uma base qualquer para $\RR^3$, imagine para cada reta que você calcular as coordenadas nos pontos com os mesmos números como coordenadas, no mundo dos pontos nos já sabemos que a conta fecha, e como a conta é exatamente a mesma para um mundo com retas e um mundo com pontos, temos que no munda das retas a conta também fecha, ou seja a volta é uma consequência direta da ia.
 \newpage
-
-%parte para ser add no futuro
+\section{Teoremas a Serem Explorados}
 \begin{lem}[Lema Útil]
 Se uma projetividade de uma $r$ em uma reta $s$ preserva um ponto então ela é uma projeção.
 \end{lem}
