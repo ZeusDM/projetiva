@@ -162,12 +162,57 @@ Isso nos leva à seguinte definição.
 \begin{defn}[Reta Projetiva e Incidência]
 Definimos uma \emph{reta projetiva do \(\PP^2(\RR)\)} como sendo uma tripla de coordenadas reais homogêneas $\langle a, b, c \rangle$.
 
-Dizemos que um ponto projetivo $[x, y, z]$ incide em uma reta projetiva $\langle a, b, c\rangle$ quando \[
+Dizemos que um ponto projetivo $[x, y, z]$ incide em uma reta projetiva $\langle a, b, c\rangle$ e que a reta incide no ponto quando \[
 ax + by + cz = 0.
 \]
 \end{defn}
 
-É importante notar que a relação de incidência não depende do representante que escolhemos para o ponto projetiva ou para a reta projetiva; portanto, essa relação está bem definida.
+É importante notar que a relação de incidência não depende do representante que escolhemos para o ponto projetivo ou para a reta projetiva; portanto, essa relação está bem definida.
+
+\begin{defn}(colinearidade e concorrência)
+Dizemos que três pontos são colineares se eles incidem uma mesma reta e três retas são concorrentes quando elas incidem um mesmo ponto.
+\end{defn}
+\begin{prop}
+Dado dois pontos existe uma única reta que incide em ambos.
+\end{prop}
+
+
+
+
+\begin{lem}
+Três pontos são colineares se, e somente se, eles são linearmente dependentes.
+\end{lem}
+\begin{proof}
+Note que $A$,$B$ e $C$ são colineares se, e somente se, eles são coplanares, ou seja, eles são linearmente dependentes.
+\end{proof}
+
+Note que como a noção de dependência linear não depende da base escolhida temos que a noção de colinearidade também não.
+
+\begin{cor}
+Dado $A$ e $B$ pontos com coordenadas $[x_A.y_A,z_A]$ e $[x_B,y_B,z_B]$ e $r$ a reta que incide em $A$ e $B$, os ponto que incidem em $r$ tem coordenadas \[[\alpha(x_A,y_A,z_A) +\beta(x_B,y_B,z_B)]\]
+\end{cor}
+
+Assim se tomarmos $(x_A,y_A,z_A)$ e $(x_B,y_B,z_B)$ como vetores de base da nossa reta conseguimos "nomear" \ todos os pontos da reta com um sistema de duas coordenadas homogêneas $[\alpha,\beta]$, ou seja com uma estrutura de reta projetiva, isso nos permite calcular razão cruzada de pontos colineares.
+
+Por outro lado a estrutura de retas no plano projetivo se assemelha muito com a dos pontos o que nos leva as seguintes definições e conclusões.
+
+\begin{defn}
+Chamamos de \emph{feixe de retas} o conjunto das retas que incidem em um ponto fixo.
+\end{defn}
+
+\begin{prop}
+Dado duas retas existe um único ponto que incide em ambas.
+\end{prop}
+
+\begin{lem}
+Três retas são concorrentes se, e somente se, eles são linearmente dependentes.
+\end{lem}
+
+\begin{cor}
+Dadas $a$ e $b$ retas com coordenadas $\langle x_A.y_A,z_A \rangle$ e $\langle x_B,y_B,z_B \rangle$ e $R$ o ponto que incide em $a$ e $b$, as retas que incidem em $R$ tem coordenadas \[\langle\alpha(x_A,y_A,z_A) +\beta(x_B,y_B,z_B)\rangle\]
+\end{cor}
+
+Assim se tomarmos $(x_A,y_A,z_A)$ e $(x_B,y_B,z_B)$ como vetores de base do nosso feixe de retas conseguimos "nomear" \ todas as retas do feixe com um sistema de duas coordenadas homogêneas $[\alpha,\beta]$, ou seja com uma estrutura de reta projetiva, isso nos permite calcular razão cruzada de retas concorrentes.
 
 \subsection{Dualidade}
 
@@ -176,6 +221,11 @@ Dualidade é uma relação entre pontos projetivos e retas projetivas. Associamo
 \begin{prop}
     Se um ponto projetivo $P$ incide em uma reta projetiva $\ell$, então o ponto projetivo dual de $\ell$ incide sobre a reta projetiva dual de $P$.
 \end{prop}
+
+
+\begin{thm}
+Dualidade preserva razão cruzada, ou seja, se $(A,B,C,D) = r$ então $(a,b,c,d) = r$, sendo $a,b,c$ e $d$ as retas duais de $A,B,C$ e $D$ respectivamente.
+\end{thm}
 
 \begin{thm}[Primeiro Teorema de Desargues]
 Dados dois triângulos $ABC$ e $A'B'C'$ as seguintes condições são equivalentes:
@@ -188,9 +238,9 @@ Dados dois triângulos $ABC$ e $A'B'C'$ as seguintes condições são equivalent
 \begin{proof}[Demonstração da Ida]
 Vamos mostrar que $1 \implies 2$:
 
-Seja $O = AA' \cap BB'$, pelo teorema \ref{thm:quatropontos} vamos tomar $A = [1, 0, 0]$, $B = [0, 1, 0]$, $C = [0, 0, 1]$ e $O = [1, 1, 1]$. Com isso temos que $AO = < 0, 1, -1>$, $BO = < 1, 0, -1>$ e $C) = < 1, -1, 0>$. Com isso temos que $A' = [a,1,1]$, $B' = [1,b,1]$ e $C'= [1,1,c]$, para alguns $a,b$ e $c$ reais. 
+Seja $O = AA' \cap BB'$, pelo teorema \ref{thm:quatropontos} vamos tomar $A = [1, 0, 0]$, $B = [0, 1, 0]$, $C = [0, 0, 1]$ e $O = [1, 1, 1]$. Com isso temos que $AO = \langle 0, 1, -1 \rangle$, $BO = \langle 1, 0, -1 \rangle$ e $C = \langle 1, -1, 0 \rangle$. Com isso temos que $A' = [a,1,1]$, $B' = [1,b,1]$ e $C'= [1,1,c]$, para alguns $a,b$ e $c$ reais. 
 
-Agora vamos calcular $X$, $Y$ e $Z$. Note que: $AB = <0,0,1>$ e $A'B' = <b-1,a-1,1-ab>$, com isso $X = [a,-b,0]$, analogamente temos $Y = [-a,0,c]$ e $Z = [0,b,-c]$, como:
+Agora vamos calcular $X$, $Y$ e $Z$. Note que: $AB = \langle 0,0,1 \rangle$ e $A'B' = \langle b-1,a-1,1-ab \rangle$, com isso $X = [a,-b,0]$, analogamente temos $Y = [-a,0,c]$ e $Z = [0,b,-c]$, como:
 
 \[\det \begin{bmatrix} a & -b & 0 \\ -a & 0 & c \\ 0 & b & -c \end{bmatrix} = 0 \text{ temos que } X,Y \text{ e } Z \text{ são colineares } \]
 \end{proof}
@@ -200,6 +250,7 @@ Suponha agora que valha a condição $2$.
 Sejam \(u = BC\), \(v = AC\), \(w = AB\); \(u' = B'C'\), \(v' = A'C'\), \(w' = A'B'\); \(p = AA'\), \(q = BB'\) e \(r = CC'\). Considere os duais $U,V,W,U',V',W',P,Q,R$ (respectivamente) dessas $9$ retas. Note que, como $X,Y,Z$ são colineares e dualidade preserva incidência, $UU', VV'$ e $WW'$ são concorrentes. Assim, aplicando a ida a $\Delta UVW$ e $\Delta U'V'W'$, concluímos que $P,Q$ e $R$ são colineares, o que equivale a $p,q$ e $r$ serem concorrentes.
 \end{proof}
 
+\subsection{Projeções e projetividades}
 
 \newpage
 \section{Teoremas a Serem Explorados}
