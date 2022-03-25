@@ -48,16 +48,29 @@ Podemos ver isso claramente em \ref{eqn:planoprojetivoplanoretaponto}.
 Prova análoga ao teorema \ref{thm:trespontos}
 \end{proof}
 
-\begin{comment}
-\section{Colinearidade e concorrência}
-\begin{defn}
-Dado um plano que passa pela origem do $\RR^3$, os conjunto de todas as retas contidas nele que passam pela origem, é chamado de \emph{reta projetiva}.
+%\begin{comment}
+\section{Colinearidade e concorrência opção 1}
+
+%\begin{defn}
+%Dado um plano que passa pela origem do $\RR^3$, os conjunto de todas as retas contidas nele que passam pela origem, é chamado de \emph{reta projetiva}.
+%\end{defn}
+
+%Outra forma de pensar a reta projetiva contida no plano projetivo é ver ela como o espaço projetivo derivado de qualquer subespaço vetorial de dimensão dois do $\RR^3$.
+
+\begin{defn}[Reta Projetiva]
+Dado um subespaço de dimensão dois do $\RR^3$, um plano que passa pela origem, uma \emph{reta projetiva} é o Espaço Projetivo referente a esse espaço vetorial.
 \end{defn}
 
-Outra forma de pensar a reta projetiva contida no plano projetivo é ver ela como o espaço projetivo derivado de qualquer subespaço vetorial de dimensão dois do $\RR^3$.
+\begin{defn}[Incidência]
+Dizemos que um ponto incide numa reta e que a reta incide no ponto quando o a reta de $\RR^3$ referente ao ponto esta contida no plano do $\RR^3$ referente à reta.
+\end{defn}
 
 \begin{cor}
-Dado dois pontos distintos existe uma única reta que passa por eles.
+Dado dois pontos distintos existe uma única reta que incide em ambos.
+\end{cor}
+
+\begin{cor}
+Dado duas retas distintas existe um único ponto que incide em ambas.
 \end{cor}
 
 \begin{thm}
@@ -71,10 +84,10 @@ Se os pontos são colineares os representantes pertencem ao mesmo plano logo ele
 Já se o determinante é zero os representantes são \textit{linearmente dependente} logo pertencem ao mesmo plano.
 \end{proof}
 
-Isso mostra que, dados $a$ e $b$ representantes fixos para $A$ e $B$, todos os pontos projetivos que são colineares com eles podem ser escritos da forma $[\alpha a + \beta b]$, com $\alpha,\beta \in \RR$. Assim, tomando $a$ e $b$ como "bases" \ dessa reta, podemos dizer que os pontos dessa reta têm coordenadas $[\alpha,\beta]$ na reta, ou seja, coordenadas de uma reta projetiva, o que nos permite calcular razão cruzada de pontos colineares no plano projetivo.
+%Isso mostra que, dados $a$ e $b$ representantes fixos para $A$ e $B$, todos os pontos projetivos que são colineares com eles podem ser escritos da forma $[\alpha a + \beta b]$, com $\alpha,\beta \in \RR$. Assim, tomando $a$ e $b$ como "bases" \ dessa reta, podemos dizer que os pontos dessa reta têm coordenadas $[\alpha,\beta]$ na reta, ou seja, coordenadas de uma reta projetiva, o que nos permite calcular razão cruzada de pontos colineares no plano projetivo.
 
 
-Opção 1
+%Opção 1
 
 Por outro lado, sabemos que um há uma associação natural entre planos que passam na origem e retas que passam na origem no $\RR^3$, que se baseia em para cada plano pegar o conjunto de vetores normal a ele, gerando a equação do plano como algo da forma $ax+by+cz = 0$, será que existe algo análogo para retas projetivas?
 
@@ -85,29 +98,23 @@ Dada uma base do $\RR^3$ e uma reta projetiva $r$, existem $a,b$ e $c$ tais que 
 Depois eu escrevo
 \end{proof}
 
-Opção 2
-
-Contudo, sabemos que um plano no $\RR^3$ pode ser descrito como, dada uma base, o conjunto de vetores $(x,y,z)$ tais que $ax+by+cz = 0$ com $a,b$ e $c$ reais fixos, mas se pegarmos um ponto projetivo qualquer, se um dos representantes dele pertence ao plano então todo o ponto também pertence, ou seja, temos que um ponto projetivo $P = [x,y,z]$ pertence a uma reta projetiva $r$ se, e somente se, vale que $ax+by+cz = 0$, sendo $a,b$ e $c$ relacionados a equação plano real associado $r$, com isso vamos dizer que as coordenadas da reta $r$ são $<a,b,c>$, note também que a coordenada das retas formam um sistema de coordenadas homogêneas pois $<a,b,c>$ e $<2a,2b,2c>$ representam o mesmo plano no $\RR^3$ logo a mesma reta no $\PP^2$
+Contudo, sabemos que um plano no $\RR^3$ pode ser descrito como, dada uma base, o conjunto de vetores $(x,y,z)$ tais que $ax+by+cz = 0$ com $a,b$ e $c$ reais fixos, mas se pegarmos um ponto projetivo qualquer, se um dos representantes dele pertence ao plano então todo o ponto também pertence, ou seja, temos que um ponto projetivo $P = [x,y,z]$ pertence a uma reta projetiva $r$ se, e somente se, vale que $ax+by+cz = 0$, sendo $a,b$ e $c$ relacionados a equação plano real associado $r$, com isso vamos dizer que as coordenadas da reta $r$ são $\langle a,b,c\rangle$, note também que a coordenada das retas formam um sistema de coordenadas homogêneas pois $\langle a,b,c\rangle$ e $\langle 2a,2b,2c\rangle$ representam o mesmo plano no $\RR^3$ logo a mesma reta no $\PP^2$
 
 \subsection{Dualidade}
 
-Vamos chamar de \emph{Dualidade} ($\mathcal{D}$) uma transformação no plano projetivo que, dada uma base do $\RR^3$, manda o ponto com coordenadas $[x,y,z]$ na reta com coordenadas $\langle x,y,z \rangle$.
+\begin{defn}[Dualidade]
+Vamos chamar de \emph{Dualidade} uma transformação no plano projetivo que leva retas em pontos de tal maneira que, um ponto vai em uma reta e vice-versa quando o plano do $\RR^3$ referente a reta é perpendicular a reta do $\RR^3$ referente ao ponto.
+\end{defn}
 
-Vamos chamar de \emph{Dualidade} ($\mathcal{D}$) uma transformação no plano projetivo que, $^T$
-\begin{thm}
-Essa transformação não depende da base escolhida.
-\end{thm}
-
-\begin{thm}
-Se um ponto pertence a reta $\langle x,y,z \rangle$, então sua imagem pertence ao ponto $[x,y,z]$
-\end{thm}
-\begin{proof}
-
-\end{proof}
-Com isso podemos dizer com isso que a transformação leva a reta $\langle x,y,z \rangle$ no ponto $[x,y,z]$
+\begin{prop}
+Dada uma base do $\RR^3$, o ponto de coordenadas $[x,y,z]$ vai na reta com coordenadas $\langle x,y,z \rangle$ e vice-versa.
+\end{prop}
+\begin{prop}
+Se um ponto pertence a reta $\langle x,y,z \rangle$, então sua imagem pertence ao ponto $[x,y,z]$.
+\end{prop}
 
 \begin{thm}
-Essa transformação leva pontos colineares em retas concorrentes.
+Essa transformação preserva incidência, ou sejam, leva pontos incidentes a uma reta em retas incidentes a um ponto e vice-versa.
 \end{thm}
 
 \begin{thm}[Primeiro Teorema de Desargues]
@@ -128,6 +135,7 @@ Agora vamos calcular $X$, $Y$ e $Z$. Note que: $AB = <0,0,1>$ e $A'B' = <b-1,a-1
 \[\det \begin{bmatrix} a & -b & 0 \\ -a & 0 & c \\ 0 & b & -c \end{bmatrix} = 0 \text{ temos que } X,Y \text{ e } Z \text{ são colineares } \]
 \end{proof}
 
+\begin{comment}
 \begin{proof}[Demonstração da Volta]
 Agora para mostrar a volta vamos usar outro argumento.
 
@@ -140,6 +148,13 @@ Ou seja, a volta do problema é exatamente a ida "trocando" ponto por reta, e al
 Escolha uma base qualquer para $\RR^3$, imagine para cada reta que você calcular as coordenadas nos pontos com os mesmos números como coordenadas, no mundo dos pontos nos já sabemos que a conta fecha, e como a conta é exatamente a mesma para um mundo com retas e um mundo com pontos, temos que no munda das retas a conta também fecha, ou seja a volta é uma consequência direta da ida.
 \end{proof}
 \end{comment}
+
+\begin{proof}[Demonstração da Volta]
+Suponha agora que valha a condição $2$.
+
+Sejam \(u = BC\), \(v = AC\), \(w = AB\); \(u' = B'C'\), \(v' = A'C'\), \(w' = A'B'\); \(p = AA'\), \(q = BB'\) e \(r = CC'\). Considere os duais $U,V,W,U',V',W',P,Q,R$ (respectivamente) dessas $9$ retas. Note que, como $X,Y,Z$ são colineares e dualidade preserva incidência, $UU', VV'$ e $WW'$ são concorrentes. Assim, aplicando a ida a $\Delta UVW$ e $\Delta U'V'W'$, concluímos que $P,Q$ e $R$ são colineares, o que equivale a $p,q$ e $r$ serem concorrentes.
+\end{proof}
+
 
 \section{Colinearidade e Concorrência opção 2}
 
